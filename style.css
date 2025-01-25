@@ -1,0 +1,655 @@
+
+/* meny (header seksjonen */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body, html {
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 1400px;
+}
+.wrapper {
+    max-width: 1400px;
+    margin: 0 auto; 
+    overflow-x: hidden;
+ 
+}
+.main-content {
+    max-width: 1000px;
+    margin: 0 auto; 
+}
+.menu, .footer {
+    width: 100%;
+}
+.menu {
+    padding: 20px 0;
+    
+}
+.navdiv{
+    max-width: 1000px;
+    margin: 0 auto; /* Sentraliser innholdet */
+    display: flex; align-items: center; justify-content: space-between;
+}
+.logo img{
+    width: 50%;
+    height: auto;
+
+}
+.header-icons {
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.header-icons li {
+    margin-left: 15px; 
+}
+
+.header-icons i {
+    font-size: 30px; 
+    color: #252525; 
+}
+.header-icons i:hover {
+    color: #1ca2c1;
+}
+
+
+
+
+
+/*main booking seksjon */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.booking-section {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.tab {
+    flex: 0 0 auto; 
+    padding: 5px 20px;
+    border: none;
+    background: none;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    border-bottom: 2px solid transparent;
+    margin-right: 2px;
+    transition: border-color 0.3s ease;
+    
+}
+
+
+.tabs::-webkit-scrollbar {
+    height: 3px;
+}
+
+.tabs::-webkit-scrollbar-thumb {
+    background-color: #1ca2c1;
+    border-radius: 5px;
+}
+
+
+.booking-section {
+    overflow-x: auto;
+   
+}
+
+
+
+
+
+
+
+
+/* form booking section */
+section.form-section {
+    background-image: url('bildemappe/sea.jpg'); 
+    background-size: 100%;
+    background-position:top;
+    background-repeat: no-repeat;
+    width: 100%; 
+    height: 50vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+form.kasse_inputs_3 {
+   background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    width: 90%;
+    box-sizing: border-box;
+}
+
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+section.row {
+    display: flex;
+    gap: 10px;
+}
+
+section.row .input-group {
+    flex: 1;
+}
+
+
+.search-btn {
+    display: block;
+    width: 100%;
+    background-color: #ffcf40;
+    color: #252525;
+    font-weight: bolder;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.search-btn:hover {
+    background-color: #ffcf40;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*holiday */
+/* Styling the card container */
+.card {
+    position: relative;
+    width: 100%; 
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    margin-top: 5%;
+}
+.card-image {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.background-image {
+    width: 100%;
+    height: auto;
+    display: block;   
+}
+.card-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    background-color:#52d3f0; 
+    color: #252525;
+    padding: 30px;
+    border-radius: 10px 10px 0 0; 
+ 
+}
+
+.card-content h2 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card-content p {
+    margin: 0 0 10px;
+    font-size: 14px;
+}
+
+.price {
+    font-size: 80px;
+    font-weight: bolder;
+}
+
+
+.cta-button {
+    background-color: #ffcf40;
+    color: #252525;
+    border: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+
+.cta-button:hover {
+    background-color: #e0b836;
+}
+
+
+
+
+
+
+
+
+/* tilbud section */
+/* Foreldreseksjon */
+.tilbud-section {
+    display: flex;
+    gap: 20px; 
+    overflow-x: scroll; 
+    padding: 20px 0;
+    scrollbar-width: thin; 
+    scrollbar-color: #ccc transparent;
+}
+
+
+.tilbud {
+    min-width: 300px; 
+    flex-shrink: 0; 
+    padding: 40px;
+    border: 1px solid  #f6f5f2;
+    border-radius: 8px;
+    background-color: #fff; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease; 
+    text-align: left;
+}
+
+
+.tilbud:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+.tilbud h3 {
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.tilbud p {
+    font-size: 12px;
+    color: #1ca2c1; 
+    margin: 0;
+}
+
+
+.tilbud-section::-webkit-scrollbar {
+    height: 6px; 
+}
+
+.tilbud-section::-webkit-scrollbar-thumb {
+    background: #ccc; 
+    border-radius: 3px;
+}
+
+
+
+
+
+
+
+/* tips og inspirasjon */
+
+.deal-card {
+    position: relative;
+    width: 100%; /* Samme bredde som i 'holiday'-seksjonen */
+    border-radius: 10px; /* Runde hjørner */
+    overflow: hidden; /* Sikrer at alt utenfor kortet klippes bort */
+    font-family: Arial, sans-serif;
+    margin-top: 5%; /* Match marginene */
+    border: 1px solid  #f6f5f2;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease; 
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    left: 10px; 
+    background-color: #00a3ff;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.deal-image {
+    width: 100%; /* Bildet fyller hele bredden */
+    height: auto; /* Opprettholder proporsjonene */
+    display: block;
+    border-radius: 10px; /* Runde hjørner for bildet */
+
+}
+
+.deal-content {
+    padding: 15px;
+}
+
+.deal-content h2 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family:'Montserrat', sans-serif ;
+
+}
+
+.deal-content p {
+    margin: 0 0 10px;
+    font-size: 14px;
+    font-family:'Montserrat', sans-serif ;
+}
+
+.deal-content .price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #00a3ff;
+    margin-top: 10px;
+    font-family:'Montserrat', sans-serif ;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+/*flags */
+.footer-section, .flags, .payment-methods, .sosiale-medier {
+    max-width: 1000px; 
+    margin: 0 auto;
+}
+.footer-container {
+    width: 100%;
+    background-color: #252525;
+    padding: 20px;
+    text-align: center;
+    color: #e8e8e8;
+    position: relative; 
+    bottom: 0; 
+    left: 0;
+}
+
+.flags ul {
+    display: grid;
+    gap: 14px; 
+    justify-content: center; 
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-columns: repeat(3, 1fr); 
+    margin-bottom: 25px;
+    
+}
+
+.flags ul li {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.flags ul li img {
+    width: 40px;
+    height: auto;
+    margin-left: 20%;
+
+}
+.flags ul li:nth-child(4),
+.flags ul li:nth-child(5) {
+    grid-column: span 1; 
+    justify-self: center; 
+  
+}
+
+
+
+
+/* Betalingsmetoder */
+.payment-methods h2 {
+    justify-content: left;
+    margin-bottom: 1rem;
+    font-size: 14px;
+}
+.payment-methods{
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+}
+
+.payment-methods ul {
+    display: flex;
+    gap: 20px; 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.payment-methods ul li i {
+    font-size: 25px; 
+    margin-bottom: 12px; 
+    color: #e8e8e8; 
+}
+
+
+
+
+/* nyheter og tilbud */
+
+.footer-section {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items:center; 
+    background-color: #252525;
+    color: #e8e8e8; 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    gap: 10px;
+}
+
+.footer-section article,
+.footer-section aside {
+    flex: 1; 
+}
+
+.footer-section h3 {
+    font-size: 0.89rem; 
+    margin-bottom: 10px; 
+    font-weight: bold;
+}
+.footer-section p{
+    font-size: 16px;
+}
+
+.nyheter-tilbud form {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; /* Sikrer god plassfordeling */
+    margin-bottom: 10px; 
+    margin-top: 10px; 
+    border: 1px solid #e8e8e8; 
+    padding: 15px; /* Juster padding for bedre plass */
+    border-radius: 4px; /* Runde hjørner */
+    box-sizing: border-box; /* Viktig for å holde elementene innenfor rammen */
+    
+
+}
+
+
+.kundeservice {
+    align-self: flex-start; 
+    margin-right: auto; 
+    text-align: left; 
+   
+}
+.nyheter-tilbud {
+    align-self: flex-start; 
+    margin-right: auto; 
+    text-align: left;
+}
+
+.nyheter-tilbud input {
+    flex: 1; /* Fyller opp tilgjengelig plass */
+    padding: 8px 2px; /* Mindre padding */
+    font-size: 13px; /* Juster tekststørrelsen */
+    border: 1px solid #ccc; /* Tynnere border */
+    border-radius: 4px; /* Runde hjørner */
+    outline: none; 
+    box-sizing: border-box; /* Forhindrer overskridelse */
+    width: 75%; /* Juster bredde */
+}
+
+.nyheter-tilbud button {
+    padding: 8px 2px; /* Juster padding for knapp */
+    background-color: #ffcf40; 
+    border: none; 
+    border-radius: 4px; 
+    color: black; 
+    font-weight: bold; 
+    cursor: pointer; 
+    margin-left: 2px; /* Avstand mellom input og knapp */
+    box-sizing: border-box; /* Sørger for korrekt dimensjonering */
+    width:25%; /* Juster bredde */
+}
+
+
+.nyheter-tilbud button:hover {
+    background-color: #ffcf40; 
+}
+
+.kundeservice ul {
+    list-style: none;
+    padding: 0; 
+    margin: 0; 
+    line-height: 1.8; 
+}
+
+.kundeservice li {
+    color: #e8e8e8;
+    cursor: pointer; 
+}
+
+.kundeservice li:hover {
+    text-decoration: underline; 
+}
+
+/* Media Query for små skjermer (maks 768px bredde) */
+@media (max-width: 768px) {
+    .footer-section {
+        flex-wrap: wrap;
+        gap: 10px; 
+    }
+
+    .footer-section article,
+    .footer-section aside {
+        flex: 1 1 48%;
+        max-width: 48%; 
+    }
+
+    .nyheter-tilbud form {
+        flex-wrap: nowrap; 
+
+    .nyheter-tilbud input {
+        width: 70%; 
+    }
+
+    .nyheter-tilbud button {
+        width: 30%; 
+    }
+}
+
+
+/* sosiale medier */
+.sosiale-medier h2 {
+    justify-content: left;
+    margin-bottom: 1rem;
+    margin-top: 6%;
+    font-size: 16px;
+}
+.sosiale-medier{
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+}
+.sosiale-medier ul {
+    display: flex;
+    gap: 20px; 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.sosiale-medier ul li {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: #e8e8e8;
+}
+}

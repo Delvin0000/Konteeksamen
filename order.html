@@ -1,0 +1,174 @@
+.footer-container{
+    background-color: #252525 ;
+    color: #e8e8e8;
+    padding: 20px;
+}
+.flags ul {
+    display: flex;
+    flex-wrap: wrap; /* Tillat bryting til nye linjer */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between; /* Fordel flaggene jevnt */
+}
+.flags li {
+    display: flex;
+    align-items: center; /* Juster innhold vertikalt */
+    margin: 10px;
+    width: calc(33.33% - 20px); /* Tre flagg per rad med mellomrom */
+    box-sizing: border-box; /* Inkluder padding og margin i bredden */
+}
+.flags img {
+    width: 40px; /* Juster størrelsen på flaggene */
+    height: auto;
+    margin-right: 10px; /* Avstand mellom flagg og tekst */
+}
+.flags span {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Bold */
+    font-size: 16px;
+    color: #e8e8e8; /* Farge på teksten */
+}
+
+
+<form class="booking-form">
+    <div class="form-group">
+        <label for="from">Fra</label>
+        <select id="from">
+            <option>Oslo Lufthavn</option>
+            <!-- Legg til flere alternativer -->
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="to">Til</label>
+        <select id="to">
+            <option>Albania</option>
+            <!-- Legg til flere alternativer -->
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="length">Reiselengde</label>
+        <select id="length">
+            <option>Mindre enn 1 uke</option>
+            <!-- Legg til flere alternativer -->
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="date">Velg dato</label>
+        <input type="date" id="date">
+    </div>
+    <div class="form-group">
+        <label for="travelers">Antall reisende</label>
+        <select id="travelers">
+            <option>2</option>
+            <!-- Legg til flere alternativer -->
+        </select>
+    </div>
+    <button type="submit" class="search-btn">Søk</button>
+</form>
+
+
+
+
+
+<form class="booking-form">
+    <label for="from">Fra</label>
+    <select id="from" class="full-width">
+        <option value="">Velg avreisested</option>
+        <!-- Alternativer -->
+    </select>
+
+    <label for="to">Til</label>
+    <select id="to" class="full-width">
+        <option value="">Velg destinasjon</option>
+        <!-- Alternativer -->
+    </select>
+
+    <label for="travel-duration">Reiselengde</label>
+    <select id="travel-duration">
+        <option value="">Velg lengde</option>
+        <!-- Alternativer -->
+    </select>
+
+    <label for="date">Velg dato</label>
+    <input type="date" id="date">
+
+    <label for="travellers">Antall reisende</label>
+    <select id="travellers" class="full-width">
+        <option value="">Velg antall reisende</option>
+        <!-- Alternativer -->
+    </select>
+
+    <button type="submit" class="search-btn">Søk</button>
+</form>
+
+
+
+
+
+
+
+
+
+
+<form class="booking-form">
+    <label for="from">Fra</label>
+    <select id="from" class="full-width">
+        <option value="">Velg avreisested</option>
+        <!-- Alternativer -->
+    </select>
+
+    <label for="to">Til</label>
+    <select id="to" class="full-width">
+        <option value="">Velg destinasjon</option>
+        <!-- Alternativer -->
+    </select>
+
+    <label for="travel-duration">Reiselengde</label>
+    <select id="travel-duration">
+        <option value="">Velg lengde</option>
+        <!-- Alternativer -->
+    </select>
+
+    <label for="date">Velg dato</label>
+    <input type="date" id="date">
+
+    <label for="travellers">Antall reisende</label>
+    <select id="travellers" class="full-width">
+        <option value="">Velg antall reisende</option>
+        <!-- Alternativer -->
+    </select>
+
+    <button type="submit" class="search-btn">Søk</button>
+</form>
+
+
+
+.booking-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+    margin-top: 4%;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+select, input[type="date"] {
+    padding: 10px;
+    font-size: 14px;
+    border: 2px solid #ccc;
+    outline: none;
+}
+
+select:focus, input[type="date"]:focus {
+    border-color: #007BFF;
+}
+
+
+.full-width {
+    grid-column: span 2;
+}
