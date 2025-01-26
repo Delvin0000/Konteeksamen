@@ -421,43 +421,21 @@ section.row .input-group {
     bottom: 0; 
     left: 0;
 }
-
-.flags ul {
-    display: grid;
-    gap: 14px; 
-    justify-content: center; 
-    grid-template-rows: auto auto;
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-columns: repeat(3, 1fr); 
-    margin-bottom: 25px;
-    
+.flags {
+    margin-bottom: 30px;
 }
-
-.flags ul li {
-    display: flex;
-    align-items: center;
-    gap: 8px; 
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    font-size: 14px;
+.Sverigee, .Danmarke, .Norgee, .soumee, .Nederlande {
+    display: inline-block; /* Holder dem på linje */
+    vertical-align: middle; /* Justerer dem vertikalt */
+    font-size: 16px; /* Standard tekststørrelse */
+    margin-right: 20px !important; /* Gap mellom bilde og tekst */ 
+    margin-bottom: 5px;
 }
 
 .flags ul li img {
     width: 40px;
     height: auto;
-    margin-left: 20%;
-
 }
-.flags ul li:nth-child(4),
-.flags ul li:nth-child(5) {
-    grid-column: span 1; 
-    justify-self: center; 
-  
-}
-
-
-
-
 /* Betalingsmetoder */
 .payment-methods h2 {
     justify-content: left;
@@ -469,7 +447,6 @@ section.row .input-group {
     flex-direction: column; 
     align-items: flex-start; 
 }
-
 .payment-methods ul {
     display: flex;
     gap: 20px; 
@@ -480,7 +457,7 @@ section.row .input-group {
 
 .payment-methods ul li i {
     font-size: 25px; 
-    margin-bottom: 12px; 
+    margin-bottom: 40px; 
     color: #e8e8e8; 
 }
 
@@ -499,6 +476,7 @@ section.row .input-group {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     gap: 10px;
+    margin-bottom: 30px;
 }
 
 .footer-section article,
@@ -650,15 +628,49 @@ section.row .input-group {
 
 
 
+
+
+
+
 /*Hotell side */
 .container {
     padding: 0rem; 
+    position: relative;
 }
+.heart-icon {
+    position: absolute;
+    top: 10px;  /* Avstand fra toppen */
+    right: 10px; /* Avstand fra høyre */
+    font-size: 18px; /* Størrelse på hjerteikonet */
+    color: white; /* Sett tekstfarge til hvit for å gjøre fyllfargen hvit */
+    border: 0.5px solid white; /* Rød kantlinje for hjertet */
+    border-radius: 50%; /* For å gjøre hjertet rundere */
+    padding: 2px; /* Legg til litt plass rundt ikonet for å gjøre hjertet mer synlig */
+}
+.heart-icone {
+    position: absolute;
+    top: 10px;  /* Avstand fra toppen */
+    right: 10px; /* Avstand fra høyre */
+    font-size: 18px; /* Størrelse på hjerteikonet */
+    color: red; /* Sett tekstfarge til hvit for å gjøre fyllfargen hvit */
+    border: 0.5px solid white; /* Rød kantlinje for hjertet */
+    background-color: white;
+    border-radius: 50%; /* For å gjøre hjertet rundere */
+    padding: 2px; /* Legg til litt plass rundt ikonet for å gjøre hjertet mer synlig */
+}
+
+/* Justering for å plassere ikonet på de andre bildene */
+.slider img {
+    width: 100%; /* Sørg for at bildene fyller hele slideren */
+}
+
+
+
 .slider-wrapper {
     position: relative;
     max-width: 48rem;
     margin: 0 auto;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
 }
 
 .slider {
@@ -698,33 +710,167 @@ section.row .input-group {
     opacity: 1;
 }
 
+/* Generelle knappeinnstillinger */
+/* Skjul radio-knappene */
+.menue{
+    /* Fast linje under knappene */
+    position: relative;
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.menue::after {
+    content: "";
+    position: absolute;
+    bottom: 0; /* Plasser linjen under knappene */
+    left: 0;
+    width: 100%; /* Linjen strekker seg over hele bredden av knappene */
+    height: 2px; /* Tykkelsen på linjen */
+    background-color: #e8e8e8; /* Fargen på linjen */
+}
+.radio-button {
+    display: none;
+   
+}
+
+/* Generell stil for knappene */
+.button {
+    border: none;
+    background: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s, border-color 0.3s;
+   
+
+    
+}
+
+/* Når knappen er valgt (radio-knapp:checked) */
+.radio-button:checked + .button {
+    color: #1ca2c1;
+    border-bottom: 4px solid #1ca2c1;
+}
+
+
+.fantastisk-container{
+    margin-top: 40px;
+    padding: 1rem;
+}
+.icon--fantastisk i {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 2px;
+    color:#ffcf40 ;
+}
+.fantastisks {
+    display: flex; 
+    align-items: center; 
+    margin-bottom: 10px;
+}
+.rat, .views {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px; 
+}
+
+.rat {
+    background-color: green;
+    color: white;
+    padding: 5px 6px;
+    border-radius: 12px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-right: 10px;
+}
+
+.views {
+    color: #252525;
+    font-size: 14px;
+    font-weight: bold;
+}
+.fantastisk-container p{
+    color: #1ca2c1;
+}
+
+.fasititeter h2 {
+    margin-top: 40px;
+    padding: 0.6rem;
+}
+.fasititeter p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    margin-bottom: 5px;
+    padding: 0.6rem;
+}
+.fasiliteter-container {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items:center; 
+    color: #252525; 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    gap: 10px;
+    padding: 1rem;
+}
+.icon-description {
+    margin-bottom: 10px;
+    margin-right: 30px; 
+}
+.eien-fasiliteter {
+    color: #1ca2c1;
+    padding: 0.8rem;
+    
+}
+
+.kart {
+    padding: 0rem;
+    margin-top: 30px;
+}
+
+.map {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.map-iframe {
+    width: 100%; 
+    height: 200px; 
+    border-radius: 10px;
+}
+
 
 
 
   /* anmeldelsers */
- /* Container for rating og tekst */
+
  .anmeldelsers{
     position: relative; 
-    margin-top: 0;  /* Fjernet top-margin for å sentrere perfekt */
+    margin-top: 25px;  
     display: flex;
-    flex-direction: column;  /* Sørg for at innholdet står vertikalt */
-    align-items: center;     /* Sentrer horisontalt */
-    justify-content: center; /* Sentrer vertikalt */
-    text-align: center;      /* For å justere tekst i midten */
+    flex-direction: column; 
+    align-items: center;     
+    justify-content: center; 
+    text-align: center;      
     width: 100%;
     max-width: 1000px;  
   }
 
   .anmeldelsers h2 {
-    text-align: left;       /* Venstrejusterer teksten */
-    margin: 0;              /* Fjernet ekstra margin */
-    padding-left: 20px;     /* Legger til litt avstand til venstre */
-    width: 100%;            /* Tar opp hele bredden */
-    max-width: 100%;        /* Sørger for at overskriften ikke overskrider containerens bredde */
-    position: absolute; /* Plasser h2 absolutt i forhold til forelderen */
-    top: 0; /* Plasserer h2 helt øverst */
-    left: 0; /* Justerer det til venstre */
-    z-index: 10; /* Sørger for at teksten er over bildet */
+    text-align: left;      
+    margin: 0;              
+    padding-left: 20px;    
+    width: 100%;            
+    max-width: 100%;        
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    z-index: 10; 
 }
 
 .anmeldelser {
@@ -732,12 +878,12 @@ section.row .input-group {
     width: 95%;
     display: flex;
     flex-wrap: wrap;
-    padding: 20px; /* Fjern padding, da bildet skal dekke hele plassen */
+    padding: 20px; 
 }
 
 .anmel-image{
-    width: 100%; /* Bildet fyller hele bredden */
-    height: auto; /* Opprettholder proporsjonene */
+    width: 100%; 
+    height: auto; 
     display: block;
     margin-top: 10px;
     
@@ -746,7 +892,7 @@ section.row .input-group {
 .anmel-content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Juster til venstre */
+    align-items: flex-start;
     width: 250px;
     padding: 20px;
     text-align: left;
@@ -763,29 +909,29 @@ section.row .input-group {
     font-family: 'Montserrat', sans-serif;
 }
 .large-point {
-    font-size: 2em; /* Øker størrelsen på punktet */
-    color: black; /* Velg ønsket farge for punktet */
+    font-size: 2em; 
+    color: black; 
 }
 
 .anmel-content p {
     font-size: 0.9em;
     color: #252525;
-    display: inline-block; /* Plasserer <p> ved siden av hverandre, men under hverandre */
+    display: inline-block;
     line-height: 1.2;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    padding: 0; /* Fjerner padding */
+    padding: 0;
 }
 
-.rating, .reviews {
-    display: inline-block; /* Holder dem på linje */
-    vertical-align: middle; /* Justerer dem vertikalt */
-    font-size: 16px; /* Standard tekststørrelse */
-}
 .rating-reviews {
-    display: flex; /* Plasserer rating og reviews horisontalt */
-    align-items: center; /* Vertikal justering */
+    display: flex; 
+    align-items: center; 
+}
+.rating, .reviews {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px; 
 }
 
 .rating {

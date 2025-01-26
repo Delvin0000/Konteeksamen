@@ -15,9 +15,9 @@
                 <div class="navdiv">
                     <div class="logo"><a href="#"><img src="bildemappe/fav.png" alt="logo"></a> </div>
                     <ul class="header-icons">
-                        <li><i class="fas fa-search"></i></li> <!-- Søkeikon -->
-                        <li><i class="far fa-user-circle"></i></li> <!-- Brukerikon -->
-                        <li><i class="fas fa-bars"></i></li> <!-- Hamburger-menyikon -->
+                        <li><i class="fas fa-search"></i></li> 
+                        <li><i class="far fa-user-circle"></i></li> 
+                        <li><i class="fas fa-bars"></i></li> 
                     </ul> 
                 </div>
             </nav>
@@ -37,6 +37,8 @@
                             <img id="slide-4" src="bildemappe/beach-maldiv.jpg" alt="maldiv">
                             <img id="slide-5" src="bildemappe/beach-mountain.jpg" alt="beach-bilde">
                             <img id="slide-6" src="bildemappe/holiday.jpg" alt="hotell-holiday">
+                            <span class="heart-icon"><i class="fas fa-heart"></i></span>
+                            <span class="heart-icone"><i class="far fa-heart"></i></span>
                         </section>
                         <section class="slider-nav">
                             <a href="#slide-1"></a>
@@ -50,17 +52,125 @@
                 </section>
                 
 
-                <nav class="menu">
-                    <button class="button">Oversikt</button>
-                    <button class="button">Fasiliteter</button>
-                    <button class="button">Rom</button>
+                <nav class="menue">
+                    <input type="radio" id="oversikt" name="menue" class="radio-button" checked>
+                    <label for="oversikt" class="button">Oversikt</label>
+                
+                    <input type="radio" id="fasiliteter" name="menue" class="radio-button">
+                    <label for="fasiliteter" class="button">Fasiliteter</label>
+                
+                    <input type="radio" id="rom" name="menue" class="radio-button">
+                    <label for="rom" class="button">Rom</label>
                 </nav>
+                
+                <section class="fantastisk-container">
+                    <h2>Parge Beach</h2>
+                    <section class="icon--fantastisk">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-sun"></i>
+                        <i class="far fa-sun"></i>
+                    </section>
+                    <span class="fantastisks">
+                        <span class="rat">8.9</span>
+                        <span class="views">Fantastisk</span>
+                    </span>
+                    <p>Se alle anmeldelsene &raquo;</p>
+                </section>
+
+                <section class="fasititeter">
+                    <h2>Fasiliteter</h2>
+                    <p>Parga Beach tilbyr et tilsynelatende uuttømmelig utvalg av sport og aktiviteteter og lokker til seg så vel eliteutøvere som aktive familier og hverdagsmosjonister __ i alle aldre og på alle nivåer.</p>
+                </section>
+
+                <section class="fasiliteter-container">
+                    <section class="fasititeter-icons">
+                        <ul>
+                            <li class="icon-description">
+                                <i class="fa-solid fa-paw"></i>
+                                <span class="icon-name">Kjæredyr-vennlig</span>
+                            </li>
+                            <li class="icon-description">
+                                <i class="fa-solid fa-mug-hot"></i>
+                                <span class="icon-name">Frokost</span>
+                            </li>
+                            <li class="icon-description">
+                                <i class="fa-solid fa-spa"></i>
+                                <span class="icon-name">Spa</span>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section class="fasititeter-icons">
+                        <ul>
+                            <li class="icon-description">
+                                <i class="fa-sharp fa-solid fa-bell-concierge"></i>
+                                <span class="icon-name">Romservice</span>
+                            </li>
+                            <li class="icon-description">
+                                <i class="fa-solid fa-martini-glass"></i>
+                                <span class="icon-name">Bar</span>
+                            </li>
+                            <li class="icon-description">
+                                <i class="fa-sharp fa-solid fa-dumbbell"></i>
+                                <span class="icon-name">Treningsenter</span>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </section>
+                <span class="eien-fasiliteter">Se alle eiendomsfasiliteter &raquo;</span>
+                
 
 
-            <section class="anmeldelsers">
-                <h2>Velg rom </h2>
-                <section class="anmeldelser">
-                    <img src="bildemappe/beach-mountain.jpg" alt="Bilde av greske strender" class="anmel-image">
+                <section class="kart">
+                    <h2>Utforsk området</h2>
+                    <section class="map">
+                        <iframe
+                            class="map-iframe"
+                            src="https://www.openstreetmap.org/export/embed.html?bbox=10.27,59.91,10.37,59.99&amp;layer=mapnik"
+                            frameborder="0">
+                        </iframe>
+                    </section>
+                    
+                </section>
+
+
+                <section class="anmeldelsers">
+                    <h2>Velg rom </h2>
+                    <section class="anmeldelser">
+                        <img src="bildemappe/beach-mountain.jpg" alt="Bilde av greske strender" class="anmel-image">
+                            <article class="anmel-content">
+                             <h3>Junior Suite</h3>
+                             <p>Plass til 2<strong class="large-point"> . </strong> Queen size-seng</p>
+                             <span class="rating-reviews">
+                                <span class="rating">8.9</span>
+                                <span class="reviews">59 anmeldelser</span>
+                             </span>
+                             <p class="anmel-price">6 789 Kr</p>
+                             <p>for 3 netter, 1 rom</p>
+                             <p>2 263 kr per natt</p>
+                             <p>lnk moms og avgifter</p>
+                            </article>
+                    </section>
+                    <section class="anmeldelser">
+                        <img src="bildemappe/beach-mountain.jpg" alt="Bilde av greske strender" class="anmel-image">
+                            <article class="anmel-content">
+                             <h3>Junior Suite</h3>
+                             <p>Plass til 2<strong class="large-point"> . </strong> Queen size-seng</p>
+                             <span class="rating-reviews">
+                                <span class="rating">8.9</span>
+                                <span class="reviews">59 anmeldelser</span>
+                            </span>
+                             <p class="anmel-price">6 789 Kr</p>
+                             <p>for 3 netter, 1 rom</p>
+                             <p>2 263 kr per natt</p>
+                             <p>lnk moms og avgifter</p>
+                            </article>
+                    </section>
+                    <section class="anmeldelser">
+                        <img src="bildemappe/beach-mountain.jpg" alt="Bilde av greske strender" class="anmel-image">
                         <article class="anmel-content">
                          <h3>Junior Suite</h3>
                          <p>Plass til 2<strong class="large-point"> . </strong> Queen size-seng</p>
@@ -73,9 +183,9 @@
                          <p>2 263 kr per natt</p>
                          <p>lnk moms og avgifter</p>
                         </article>
-                </section>
-                <section class="anmeldelser">
-                    <img src="bildemappe/beach-mountain.jpg" alt="Bilde av greske strender" class="anmel-image">
+                    </section>
+                    <section class="anmeldelser">
+                       <img src="bildemappe/beach-mountain.jpg" alt="Bilde av greske strender" class="anmel-image">
                         <article class="anmel-content">
                          <h3>Junior Suite</h3>
                          <p>Plass til 2<strong class="large-point"> . </strong> Queen size-seng</p>
@@ -88,38 +198,8 @@
                          <p>2 263 kr per natt</p>
                          <p>lnk moms og avgifter</p>
                         </article>
+                    </section>
                 </section>
-                <section class="anmeldelser">
-                    <img src="bildemappe/beach-mountain.jpg" alt="Bilde av greske strender" class="anmel-image">
-                        <article class="anmel-content">
-                         <h3>Junior Suite</h3>
-                         <p>Plass til 2<strong class="large-point"> . </strong> Queen size-seng</p>
-                         <span class="rating-reviews">
-                            <span class="rating">8.9</span>
-                            <span class="reviews">59 anmeldelser</span>
-                        </span>
-                         <p class="anmel-price">6 789 Kr</p>
-                         <p>for 3 netter, 1 rom</p>
-                         <p>2 263 kr per natt</p>
-                         <p>lnk moms og avgifter</p>
-                        </article>
-                </section>
-                <section class="anmeldelser">
-                    <img src="bildemappe/beach-mountain.jpg" alt="Bilde av greske strender" class="anmel-image">
-                        <article class="anmel-content">
-                         <h3>Junior Suite</h3>
-                         <p>Plass til 2<strong class="large-point"> . </strong> Queen size-seng</p>
-                         <span class="rating-reviews">
-                            <span class="rating">8.9</span>
-                            <span class="reviews">59 anmeldelser</span>
-                        </span>
-                         <p class="anmel-price">6 789 Kr</p>
-                         <p>for 3 netter, 1 rom</p>
-                         <p>2 263 kr per natt</p>
-                         <p>lnk moms og avgifter</p>
-                        </article>
-                </section>
-            </section>
 
             </div>
         </main>
@@ -129,15 +209,22 @@
         <footer class="footer-container">
             
                     
+                    
             <section class="flags">
                 <ul>
-                    <li><img src="flagmappe/sweden.png" alt="Sverige"> Sverige</li>
-                    <li><img src="flagmappe/denmark.png" alt="Danmark"> Danmark</li>
-                    <li><img src="flagmappe/norway.png" alt="Norge"> Norge</li>
-                    <li><img src="flagmappe/material.png" alt="Suomi"> Suomi</li>
-                    <li><img src="flagmappe/netherlands.png" alt="Nederland"> Nederland</li>
+                    <li class="første-flag1">
+                        <span><img class="Sverigee" src="flagmappe/sweden.png" alt="Sverige"> Sverige</span>
+                        <span><img class="Danmarke" src="flagmappe/denmark.png" alt="Danmark"> Danmark</span>
+                    </li>
+                    <li class="første-flag2">
+                        <span><img class="Norgee" src="flagmappe/norway.png" alt="Norge"> Norge</span>
+                        <span><img class="soumee" src="flagmappe/material.png" alt="Suomi"> Suomi</span>
+                    </li>
+                    <li class="første-flag3">
+                        <span><img class="Nederlande" src="flagmappe/netherlands.png" alt="Nederland"> Nederland</span>
+                    </li>
                 </ul>
-            </section>           
+            </section>              
                 
                     
             <section class="payment-methods">
