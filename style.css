@@ -19,7 +19,6 @@ body, html {
     max-width: 1400px;
     margin: 0 auto; 
     overflow-x: hidden;
- 
 }
 .main-content {
     max-width: 1000px;
@@ -198,18 +197,6 @@ section.row .input-group {
 .search-btn:hover {
     background-color: #ffcf40;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -653,3 +640,172 @@ section.row .input-group {
     color: #e8e8e8;
 }
 }
+
+
+
+
+
+
+
+
+
+
+/*Hotell side */
+.container {
+    padding: 0rem; 
+}
+.slider-wrapper {
+    position: relative;
+    max-width: 48rem;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.slider {
+    display: flex;
+    aspect-ratio: 16 / 13;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.slider-nav {
+   display: flex;
+   column-gap: 1rem;
+   position: absolute;
+   bottom: 1.25rem;
+   left: 50%;
+   transform: translateX(-50%);
+   z-index: 1;
+}
+
+.slide img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+
+}
+
+.slider-nav a {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0,75;
+    transition: opacity ease 250ms;
+}
+.slider-nav a:hover {
+    opacity: 1;
+}
+
+
+
+
+  /* anmeldelsers */
+ /* Container for rating og tekst */
+ .anmeldelsers{
+    position: relative; 
+    margin-top: 0;  /* Fjernet top-margin for å sentrere perfekt */
+    display: flex;
+    flex-direction: column;  /* Sørg for at innholdet står vertikalt */
+    align-items: center;     /* Sentrer horisontalt */
+    justify-content: center; /* Sentrer vertikalt */
+    text-align: center;      /* For å justere tekst i midten */
+    width: 100%;
+    max-width: 1000px;  
+  }
+
+  .anmeldelsers h2 {
+    text-align: left;       /* Venstrejusterer teksten */
+    margin: 0;              /* Fjernet ekstra margin */
+    padding-left: 20px;     /* Legger til litt avstand til venstre */
+    width: 100%;            /* Tar opp hele bredden */
+    max-width: 100%;        /* Sørger for at overskriften ikke overskrider containerens bredde */
+    position: absolute; /* Plasser h2 absolutt i forhold til forelderen */
+    top: 0; /* Plasserer h2 helt øverst */
+    left: 0; /* Justerer det til venstre */
+    z-index: 10; /* Sørger for at teksten er over bildet */
+}
+
+.anmeldelser {
+    max-width: 1000px;
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px; /* Fjern padding, da bildet skal dekke hele plassen */
+}
+
+.anmel-image{
+    width: 100%; /* Bildet fyller hele bredden */
+    height: auto; /* Opprettholder proporsjonene */
+    display: block;
+    margin-top: 10px;
+    
+}
+
+.anmel-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Juster til venstre */
+    width: 250px;
+    padding: 20px;
+    text-align: left;
+    flex: 1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    border-radius: 0px 0px 10px 10px;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.anmel-content h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+    font-family: 'Montserrat', sans-serif;
+}
+.large-point {
+    font-size: 2em; /* Øker størrelsen på punktet */
+    color: black; /* Velg ønsket farge for punktet */
+}
+
+.anmel-content p {
+    font-size: 0.9em;
+    color: #252525;
+    display: inline-block; /* Plasserer <p> ved siden av hverandre, men under hverandre */
+    line-height: 1.2;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    padding: 0; /* Fjerner padding */
+}
+
+.rating, .reviews {
+    display: inline-block; /* Holder dem på linje */
+    vertical-align: middle; /* Justerer dem vertikalt */
+    font-size: 16px; /* Standard tekststørrelse */
+}
+.rating-reviews {
+    display: flex; /* Plasserer rating og reviews horisontalt */
+    align-items: center; /* Vertikal justering */
+}
+
+.rating {
+    background-color: green;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-right: 10px;
+}
+
+.reviews {
+    color: #252525;
+    font-size: 14px;
+    font-weight: bold;
+}
+.anmel-price {
+    font-size: 1.5em !important;
+    margin-top: 10px !important;
+    
+}
+
