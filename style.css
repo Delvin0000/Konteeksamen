@@ -1,4 +1,13 @@
 
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat%20(1).woff2') format('woff2'),
+         url('fonts/Montserrat%20(1).woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 /* meny (header seksjonen */
 *{
     margin: 0;
@@ -6,6 +15,17 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
+}
+.wrapper {
+    max-width: 1400px;
+    margin: 0 auto; 
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+.main-content {
+    max-width: 1000px;
+    margin: 0 auto; 
+    font-family: 'Montserrat', sans-serif;
 }
 body, html {
     font-family: 'Montserrat', sans-serif;
@@ -15,17 +35,9 @@ body, html {
     box-sizing: border-box;
     max-width: 1400px;
 }
-.wrapper {
-    max-width: 1400px;
-    margin: 0 auto; 
-    overflow-x: hidden;
-}
-.main-content {
-    max-width: 1000px;
-    margin: 0 auto; 
-}
 .menu, .footer {
     width: 100%;
+    font-family: 'Montserrat', sans-serif;
 }
 .menu {
     padding: 20px 0;
@@ -61,10 +73,7 @@ body, html {
 
 
 
-
-
 /*main booking seksjon */
-
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -76,6 +85,7 @@ body {
     width: 100%;
     overflow: hidden;
     padding: 20px;
+    overflow-x: auto;
 }
 
 .tabs {
@@ -108,19 +118,6 @@ body {
     background-color: #1ca2c1;
     border-radius: 5px;
 }
-
-
-.booking-section {
-    overflow-x: auto;
-   
-}
-
-
-
-
-
-
-
 
 /* form booking section */
 section.form-section {
@@ -266,15 +263,7 @@ section.row .input-group {
     background-color: #e0b836;
 }
 
-
-
-
-
-
-
-
 /* tilbud section */
-/* Foreldreseksjon */
 .tilbud-section {
     display: flex;
     gap: 20px; 
@@ -326,11 +315,6 @@ section.row .input-group {
     background: #ccc; 
     border-radius: 3px;
 }
-
-
-
-
-
 
 
 /* tips og inspirasjon */
@@ -398,13 +382,6 @@ section.row .input-group {
 
 
 
-
-
-
-
-
-
-
 /* footer */
 /*flags */
 .footer-section, .flags, .payment-methods, .sosiale-medier {
@@ -460,10 +437,6 @@ section.row .input-group {
     margin-bottom: 40px; 
     color: #e8e8e8; 
 }
-
-
-
-
 /* nyheter og tilbud */
 
 .footer-section {
@@ -632,6 +605,17 @@ section.row .input-group {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 /*Hotell side */
 .container {
     padding: 0rem; 
@@ -710,8 +694,7 @@ section.row .input-group {
     opacity: 1;
 }
 
-/* Generelle knappeinnstillinger */
-/* Skjul radio-knappene */
+
 .menue{
     /* Fast linje under knappene */
     position: relative;
@@ -733,7 +716,7 @@ section.row .input-group {
    
 }
 
-/* Generell stil for knappene */
+
 .button {
     border: none;
     background: none;
@@ -749,7 +732,7 @@ section.row .input-group {
     
 }
 
-/* Når knappen er valgt (radio-knapp:checked) */
+
 .radio-button:checked + .button {
     color: #1ca2c1;
     border-bottom: 4px solid #1ca2c1;
@@ -841,13 +824,10 @@ section.row .input-group {
 .map-iframe {
     width: 100%; 
     height: 200px; 
+    border: none;
     border-radius: 10px;
 }
-
-
-
-
-  /* anmeldelsers */
+/* anmeldelsers */
 
  .anmeldelsers{
     position: relative; 
@@ -955,3 +935,220 @@ section.row .input-group {
     
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* order side */
+.søke-tabs{
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    background-color: #1ca2c1;
+    margin-bottom: 15px;
+    align-items: center;
+    padding: 2px 0; 
+}
+.søke-tab{
+    flex: 0 0 auto; 
+    padding: 5px 15px;
+    border: none;
+    background: none;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    border-bottom: 2px solid transparent;
+    margin-right: 5px;
+    transition: border-color 0.3s ease, background-color 0.3s ease; 
+    color: #f6f5f2;
+    font-size: 15px;
+}
+
+.søke-tabs::-webkit-scrollbar {
+    height: 3px;
+}
+.søke-tabs::-webkit-scrollbar-thumb {
+    background-color: #f6f5f2;
+    border-radius: 5px;
+}
+.søkefelt-icon {
+    
+    color: white;
+    font-size: 30px;
+    margin: 0 10px; 
+    line-height: 1;
+    display: flex; 
+}
+
+
+.order-title h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.opplysninger1 h3 {
+    margin-top: -22px;
+    margin-bottom: 5px;
+}
+.opplysninger1 label[for="firstname"] {
+    font-size: 13.5px;       
+    font-weight: bold;   
+    color: #333;            
+}
+.opplysninger1 #firstname {
+    font-size: 18px;     
+    padding: 5px;           
+    border: 2px solid #e8e8e8; 
+    border-radius: 5px;     
+    width: 100%;         
+    box-sizing: border-box; 
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.opplysninger1 label[for="lastname"] {
+    font-size: 13.5px;       
+    font-weight: bold;   
+    color: #333;            
+}
+.opplysninger1 #lastname {
+    font-size: 18px;     
+    padding: 5px;           
+    border: 2px solid #e8e8e8; 
+    border-radius: 5px;     
+    width: 100%;         
+    box-sizing: border-box; 
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.datoer {
+    margin-top: 10px;        
+}
+.datoer label {
+    font-size: 13.5px;            
+    font-weight: bold;          
+    display: block;             
+    margin-bottom: 5px;         
+}
+
+
+.datoer .inputs {
+    display: flex;              
+    gap: 27px;                
+    justify-content: flex-start;
+}
+
+.datoer input {
+    font-size: 12px;             
+    padding: 8px;             
+    border: 1px solid #ccc;  
+    border-radius: 3px;
+    box-sizing: border-box;    
+}
+.inputs{
+    margin-bottom: 20px;
+}
+.datoer #dayInput {
+    width: 160px;                
+}
+.datoer #monthInput {
+    width: 90px;             
+}
+.datoer #yearInput {
+    width: 50px;               
+}
+.kjønn label[for="title"] {
+    font-size: 13.5px;
+    font-weight: bold;
+
+}
+
+
+
+.kjønn label {
+    font-size: 13.5px; 
+    font-weight: bold;
+    margin-right: 10px; 
+    
+}
+.kjønn input[type="radio"] {
+    margin-right: 5px; /* Avstand mellom radioknappen og etiketten */
+    margin-top: 10px;
+    margin-bottom: 20px;
+    
+}
+.kontakt-informasjon {
+    display: flex;
+    flex-direction: column; 
+    margin-top: 10px;   
+}
+.kontakt-informasjon input {
+    width: 100%;                      
+    font-size: 13px;           
+    border: 1px solid #e8e8e8;   
+    border-radius: 5px;       
+    box-sizing: border-box; 
+    margin-bottom: 16px; 
+    height: 35px;  
+}
+.kontakt-informasjon label {
+    font-size: 13px;        
+    font-weight: bold;      
+    margin-bottom:8px;   
+}
+.select-land {
+    height: 37px; 
+    border: 1px solid #e8e8e8;
+    border-radius: 5px; 
+    margin-bottom: 16px;  
+    max-width: 1000px;
+    width: 100%;
+}
+.select-land option {
+    word-wrap: break-word; /* Bryter teksten hvis den er for lang */
+    overflow: hidden;      /* Hindrer overflyt av tekst */
+    
+}
+
+.opplysninger1 {
+    margin-top: 0;   
+    flex-direction: column; 
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px; 
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #f6f5f2;
+    border-radius: 10px;
+    font-style: 'Montserrat';
+    margin-bottom: 15px;
+}
+.siste-trinn{
+    margin-left: 20px;
+    height: 45px;
+    background-color: #ffcf40;
+    border: none;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Montserrat',sans-serif;
+    margin-bottom: 30px;
+}
