@@ -44,9 +44,10 @@ body, html {
     margin-bottom: -30px;
     
 }
+
 .navdiv{
     max-width: 1000px;
-    margin: 0 auto; /* Sentraliser innholdet */
+    margin: 0 auto; 
     display: flex; align-items: center; justify-content: space-between;
 }
 .logo img{
@@ -75,8 +76,9 @@ a {
     color: black;
     text-decoration: none; 
 }
-
-
+.desktop-header {
+    display: none; /* Skjuler seksjonen på mobil */
+}
 
 /*main booking seksjon */
 body {
@@ -236,8 +238,8 @@ button:hover {
    
 }
 
-.price {
-    font-size: 80px;
+.card-content .price {
+    font-size: 25px;
     font-weight: bolder;
 }
 
@@ -543,32 +545,6 @@ button:hover {
     text-decoration: underline; 
 }
 
-/* Media Query for små skjermer (maks 768px bredde) */
-@media (max-width: 768px) {
-    .footer-section {
-        flex-wrap: wrap;
-        gap: 10px; 
-    }
-
-    .footer-section article,
-    .footer-section aside {
-        flex: 1 1 48%;
-        max-width: 48%; 
-    }
-
-    .nyheter-tilbud form {
-        flex-wrap: nowrap; 
-
-    .nyheter-tilbud input {
-        width: 70%; 
-    }
-
-    .nyheter-tilbud button {
-        width: 30%; 
-    }
-}
-
-
 
 .sosiale-medier h2 {
     justify-content: left;
@@ -595,10 +571,98 @@ button:hover {
     font-size: 20px;
     color: #e8e8e8;
 }
+
+@media (min-width: 1024px) {
+  
+    body {
+        max-width: 1400px;
+    }
+    header.menu {
+        max-width: 1400px;
+        width:100%;
+        display: flex;
+        justify-content: space-between; 
+       
+    }
+    header .logo {
+        margin-top: 20px;
+    }
+    .navbar {
+        padding: 0px 20px;
+        margin-bottom: 0;
+    }
+    .navdiv {
+        margin-left: 0; /* Fjern marginen her for å sentrere innholdet */
+    }
+    .header-icons li {
+        display: none;
+    }
+    .desktop-header {
+        display: flex;
+        flex-direction: column; 
+        justify-content: space-between; 
+        width: 100%; /* Tar 100% av bredden */
+        margin-bottom: 10px;
+        
+    }
+    .desktop-header .link2, .link1 {
+        border: 1px solid #1ca2c1;
+        color: #1ca2c1;
+        border-radius: 20px;
+        padding: 5px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        margin-left: 10px;
+        font-size: 14px;
+    }
+   
+    
+    .search-desktop-container, .desktop-buttons {
+        display: flex;
+        justify-content: flex-end; 
+    }
+    .desktop-buttons {
+        
+        margin-top: 10px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold; 
+        font-size: 13px;
+    }
+    .desktop-buttons a {
+        margin-right: 15px;
+    }
+
+    
+
+
+
+    .footer-container {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    
+    .footer-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; 
+        gap: 90px; 
+        margin-bottom: 30px;
+    }
+
+    
+    .flags ul {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+    }
+    .media {
+        display: flex;
+        
+    }
 }
-
-
-
 
 
 
@@ -972,6 +1036,7 @@ a:focus .button, a:hover .button {
     margin-bottom: 15px;
     align-items: center;
     padding: 2px 0; 
+    margin-top: 15px;
 }
 .søke-tab{
     flex: 0 0 auto; 
@@ -1006,13 +1071,13 @@ a:focus .button, a:hover .button {
 
 
 
+
 .hotellseksjon {
     max-width: 1000px;
-    margin: 0 auto; /* Sentraliser seksjonen */
+    margin: 0 auto; 
     padding: 10px;
 }
 
-/* Details styling */
 details {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
@@ -1041,15 +1106,13 @@ summary:hover {
     margin-left: 5px;
 }
 
-/* Når details åpnes, snu pilen */
 details[open] .arrow {
     transform: rotate(180deg);
 }
 
-/* Hotell-informasjon */
 .hotell-info {
     margin-top: 10px;
-    text-align: center;
+    text-align:start;
 }
 
 .hotell-bilde {
@@ -1074,16 +1137,25 @@ details[open] .arrow {
     text-align: start;
 }
 .hotell-detaljer {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
     font-weight: normal;
+
+}
+
+.detalj {
+    display: flex;
+    align-items: center; 
+    gap: 8px; 
 }
 
 .hotell-detaljer li {
     margin-bottom: 5px;
 }
+
 
 
 
@@ -1099,12 +1171,13 @@ details[open] .arrow {
     margin-top: -22px;
     margin-bottom: 5px;
 }
-.opplysninger1 label[for="firstname"] {
+/*
+.opplysninger1 label[for="førstnavn"] {
     font-size: 13.5px;       
     font-weight: bold;   
     color: #333;            
 }
-.opplysninger1 #firstname {
+.opplysninger1 #førstnavn {
     font-size: 18px;     
     padding: 5px;           
     border: 2px solid #e8e8e8; 
@@ -1116,12 +1189,12 @@ details[open] .arrow {
 }
 
 
-.opplysninger1 label[for="lastname"] {
+.opplysninger1 label[for="etternavn"] {
     font-size: 13.5px;       
     font-weight: bold;   
     color: #333;            
 }
-.opplysninger1 #lastname {
+.opplysninger1 #etternavn {
     font-size: 18px;     
     padding: 5px;           
     border: 2px solid #e8e8e8; 
@@ -1131,7 +1204,7 @@ details[open] .arrow {
     margin-top: 10px;
     margin-bottom: 10px;
 }
-
+*/
 
 .datoer {
     margin-top: 10px;        
@@ -1160,35 +1233,53 @@ details[open] .arrow {
 .inputs{
     margin-bottom: 20px;
 }
-.datoer #dayInput {
+.datoer #dayy {
     width: 160px;                
 }
-.datoer #monthInput {
+.datoer #monthh {
     width: 90px;             
 }
-.datoer #yearInput {
+.datoer #yearr {
     width: 50px;               
 }
+
+
+
+
+
+
+
+
 .kjønn label[for="title"] {
     font-size: 13.5px;
     font-weight: bold;
-
+    margin: 0;
 }
 
-
-
-.kjønn label {
-    font-size: 13.5px; 
+.kjønn legend {
+    font-size: 13.5px;
     font-weight: bold;
-    margin-right: 10px; 
-    
+    margin-bottom: 15px;   
 }
-.kjønn input[type="radio"] {
-    margin-right: 5px; 
-    margin-top: 10px;
-    margin-bottom: 20px;
-    
+fieldset.kjønn {
+    border: none;
+    display: flex;           
+    flex-direction: row;        
+    align-items:center;    
 }
+fieldset.kjønn label {
+    margin-right: 100px; 
+    margin-bottom: 5px;
+}
+
+
+
+
+
+
+
+
+
 .kontakt-informasjon {
     display: flex;
     flex-direction: column; 
@@ -1242,11 +1333,17 @@ details[open] .arrow {
     border: none;
     border-radius: 4px;
     padding: 8px;
-    font-size: 16px;
-    font-weight: 700;
+    font-size: 14px;
     font-family: 'Montserrat',sans-serif;
+    font-weight: bolder;
     margin-bottom: 30px;
 }
+
+
+
+
+
+
 
 
 

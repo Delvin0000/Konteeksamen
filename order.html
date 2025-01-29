@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,23 +22,37 @@
               </ul> 
           </div>
       </nav>
+      <section class="desktop-header">
+        <section class="search-desktop-container">
+            <i class="fas fa-search"></i> 
+            <a href="#" class="link2">Opprett en Konto</a>
+            <a href="#" class="link1"><i class="far fa-user-circle"></i> Min side</a>
+        </section>
+        
+        <section class="desktop-buttons">
+            <a href="#">Tips og inspirasjon</a>
+            <a href="#">Hotell</a>
+            <a href="#">Fly</a>
+            <a href="#">Kontakt</a>
+        </section>
+    </section>
     </header>
   
     <section class="søkefelt">
         <nav class="søke-tabs">
-           <a href="index.html"><button class="søke-tab"> Søk</button></a>
+           <a href="index.html" class="søke-tab"> Søk</a>
            <span class="søkefelt-icon"><i class= "fas fa-chevron-right"></i></span>
-           <a href="hotell.html"><button class="søke-tab"> Søkeresultater</button></a>
+           <a href="hotell.html" class="søke-tab"> Søkeresultater</a>
            <span class="søkefelt-icon"><i class= "fas fa-chevron-right"></i></span>
-           <a href="hotell.html#anmel-r"><button class="søke-tab">Romtype</button></a>
+           <a href="hotell.html#anmel-r" class="søke-tab">Romtype</a>
            <span class="søkefelt-icon"><i class= "fas fa-chevron-right"></i></span>
-           <a href="https://www.norwegian.no/"><button class="søke-tab">Fly</button></a>
+           <a href="https://www.norwegian.no/" class="søke-tab">Fly</a>
            <span class="søkefelt-icon"><i class= "fas fa-chevron-right"></i></span>
-           <button class="søke-tab">Tillegg</button>
+           <a href="" class="søke-tab">Tillegg</a>
            <span class="søkefelt-icon"><i class= "fas fa-chevron-right"></i></span>
-           <button class="søke-tab">OPPLYSNINGER</button>
+           <a href="" class="søke-tab">OPPLYSNINGER</a>
            <span class="søkefelt-icon"><i class= "fas fa-chevron-right"></i></span>
-           <a href="#foote-flag"><button class="søke-tab">Bestill</button></a>
+           <a href="#foote-flag" class="søke-tab">Bestill</a>
         </nav>
     </section>
     <section class="hotellseksjon">
@@ -57,14 +71,14 @@
                     </section>
 
                     <section class="hotell-detaljer">
-                        <span class="detalj"><i class="fas fa-map-marker-alt"></i> <p>Hellas, Praga</p></span>
-                        <span class="detalj"><i class="far fa-calendar"></i><p>Man 5 mai - man 12 mai 2025</p></span>
-                        <span class="detalj"><i class="fa-regular fa-user"></i><p>2 Voksne</p></span>
-                        <span class="detalj"><i class="fas fa-bed"></i><p>Deluxerom, Balkong og ikke spesifisert uutsikt.</p></span>
-                        <span class="detalj"><i class="fas fa-utensils"></i><p>Frokostbuffe</p></span>
-                        <span class="detalj"><i class="fas fa-plane-departure"></i><p>Oslo Lufthavn -- Preveza</p></span>
-                        <span class="detalj pris"><p>22 003,-</p></span>
-                        <span class="detalj rabatt"><p>19 803,-</p></span>
+                        <span class="detalj"><i class="fas fa-map-marker-alt"></i>Hellas, Praga></span>
+                        <span class="detalj"><i class="far fa-calendar"></i>Man 5 mai - man 12 mai 2025</span>
+                        <span class="detalj"><i class="fa-regular fa-user"></i>2 Voksne</span>
+                        <span class="detalj"><i class="fas fa-bed"></i>Deluxerom, Balkong og ikke spesifisert uutsikt.</span>
+                        <span class="detalj"><i class="fas fa-utensils"></i>Frokostbuffe</span>
+                        <span class="detalj"><i class="fas fa-plane-departure"></i>Oslo Lufthavn -- Preveza</span>
+                        <span class="detalj pris">22 003,-</span>
+                        <span class="detalj rabatt">19 803,-</span>
                     </section>
                     
                 </figcaption>
@@ -101,14 +115,15 @@
 
 
 
-      <section class="kjønn">
-        <label for="title">KJØNN</label><br>
-        <input type="radio" id="KVINNE"  name="kjønn" value="Kvinne" required>
+     <fieldset class="kjønn">
+        <legend>KJØNN</legend>
+        
+        <input type="radio" id="KVINNE" name="kjønn" value="Kvinne" required>
         <label for="KVINNE">KVINNE</label>
-
-        <input type="radio" id="MANN"  name="kjønn" value="MANN" required>
+    
+        <input type="radio" id="MANN" name="kjønn" value="MANN" required>
         <label for="MANN">MANN</label>
-      </section>
+    </fieldset>
 
       <section class="kontakt-informasjon">
         <label for="email">E-POSTADRESSE:</label>
@@ -118,13 +133,13 @@
         <input type="tel" id="phone" required>
 
         <label for="gateadress">GATEADRESSE:</label>
-        <input type="gateadress" id="gateadress" required>
+        <input type="text" id="gateadress" required>
 
         <label for="postnummer">POSTNUMMER:</label>
-        <input type="postnummer" id="postnummer" required>
+        <input type="number" id="postnummer" required>
 
         <label for="poststed">POSTSTED:</label>
-        <input type="poststed" id="poststed" required>
+        <input type="text" id="poststed" required>
 
         <label for="land">LAND:</label>
         <select class="select-land" id="land" required>
@@ -144,66 +159,41 @@
     <section class="opplysninger1">
         <h3>VOKSEN 18+</h3>
         <form action="example.html" method="get">
-        <label for="firstname">FORNAVN (IFØLGE PASS):</label>
-        <input type="text" id="firstname" minlength="4" maxlength="12" required><br>
+        <label for="førstnavn">FORNAVN (IFØLGE PASS):</label>
+        <input type="text" id="førstnavn" minlength="4" maxlength="12" required><br>
   
-        <label for="lastname">ETTERNAVN (IFØLGE PASS):</label>
-        <input type="text" id="lastname" minlength="4" maxlength="12" required><br>
+        <label for="etternavn">ETTERNAVN (IFØLGE PASS):</label>
+        <input type="text" id="etternavn" minlength="4" maxlength="12" required><br>
   
         <section class="datoer">
           <label for="dayInput">FØDSELSDATO:</label>
           <article class="inputs">
-              <input type="number" id="dayInput" name="dayInput" min="1" max="31" step="1" placeholder="DD" required>
-              <input type="number" id="monthInput" name="monthInput" min="1" max="12" step="1" placeholder="MM" required>
-              <input type="number" id="yearInput" name="yearInput" min="1900" max="9999" step="1" placeholder="ÅÅÅÅ" required>
+              <input type="number" id="dayy" name="dayInput" min="1" max="31" step="1" placeholder="DD" required>
+              <input type="number" id="monthh" name="monthInput" min="1" max="12" step="1" placeholder="MM" required>
+              <input type="number" id="yearr" name="yearInput" min="1900" max="9999" step="1" placeholder="ÅÅÅÅ" required>
           </article>
        </section>    
        
-        <section class="kjønn">
-          <label for="title">KJØNN</label><br>
-          <input type="radio" id="KVINNE"  name="kjønn" value="Kvinne" required>
-          <label for="KVINNE">KVINNE</label>
-  
-          <input type="radio" id="MANN"  name="kjønn" value="MANN" required>
-          <label for="MANN">MANN</label>
-        </section>
+
+
+        <fieldset class="kjønn">
+            <legend>KJØNN</legend>
+            
+            <input type="radio" id="KVINNEE" name="kjønn" value="Kvinne" required>
+            <label for="KVINNEE">KVINNE</label>
+        
+            <input type="radio" id="MANNN" name="kjønn" value="MANN" required>
+            <label for="MANNN">MANN</label>
+        </fieldset>
+    
         </form>
     </section>
     <button class="siste-trinn">Siste Trinn <i class="fas fa-arrow-right"></i></button>
 
-  </div>
-</body>
-
-  
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<footer class="footer-container">
-            
-                    
+ <footer class="footer-container">               
   <section class="flags" id="foote-flag">
       <ul>
           <li class="første-flag1">
@@ -221,7 +211,7 @@
   </section>           
       
           
-
+  <section class="media">
   <section class="payment-methods">
       <h2>BETALINGSMETODER</h2>
       <ul>
@@ -265,7 +255,8 @@
           <li><i class="fa-brands fa-youtube"></i> </li>
       </ul>
   </section>
-</footer>
+</section>
+ </footer>
 </div>
 
 </body>
