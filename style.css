@@ -41,6 +41,7 @@ body, html {
 }
 .menu {
     padding: 20px 0;
+    margin-bottom: -30px;
     
 }
 .navdiv{
@@ -70,6 +71,10 @@ body, html {
 .header-icons i:hover {
     color: #1ca2c1;
 }
+a {
+    color: black;
+    text-decoration: none; 
+}
 
 
 
@@ -81,133 +86,118 @@ body {
     
 }
 
+/*
 .booking-section {
+   
     width: 100%;
     overflow: hidden;
     padding: 20px;
     overflow-x: auto;
+} */
+
+.bestillingsskjema {
+    background: white;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 1000px;
+    width: 93%;
+    margin-top: -220px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    gap: 15px;
+    position: relative;
+}
+.banner {
+    
+    width: 100% !important; /* Sørg for at banneret tar 100% bredde */
+    height: 250px;
+    background: url('bildemappe/sea.jpg') center/cover no-repeat;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 20px;
+    
 }
 
-.tabs {
+nav.første-felte {
     display: flex;
-    justify-content: flex-start;
+    gap: 3px;
     overflow-x: auto;
-    scroll-behavior: smooth;
+    font-size: 14px;
+    align-items: center;
+    position: relative;   
 }
 
-.tab {
-    flex: 0 0 auto; 
-    padding: 5px 20px;
-    border: none;
-    background: none;
+nav.første-felte a {
+    text-decoration: none;
+    padding: 5px 10px;
+    color: black;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+nav.første-felte a.active {
+    border-bottom: 3px solid #1ca2c1;
     font-weight: bold;
-    cursor: pointer;
-    text-align: center;
-    border-bottom: 2px solid transparent;
-    margin-right: 2px;
-    transition: border-color 0.3s ease;
     
 }
 
 
-.tabs::-webkit-scrollbar {
-    height: 3px;
+
+form {
+    display: grid;
+    gap: 6px;
+   
 }
 
-.tabs::-webkit-scrollbar-thumb {
-    background-color: #1ca2c1;
-    border-radius: 5px;
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+   
 }
 
-/* form booking section */
-section.form-section {
-    background-image: url('bildemappe/sea.jpg'); 
-    background-size: 100%;
-    background-position:top;
-    background-repeat: no-repeat;
-    width: 100%; 
-    height: 50vh; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-form.kasse_inputs_3 {
-   background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 1000px;
-    width: 90%;
-    box-sizing: border-box;
-}
-
-
-.input-group {
-    margin-bottom: 20px;
-}
-
-.input-group label {
-    display: block;
-    font-size: 14px;
+label {
     font-weight: bold;
-    margin-bottom: 5px;
-    color: #333;
-}
-
-.input-group input,
-.input-group select {
-    width: 100%;
-    padding: 10px;
     font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
 }
 
 
-section.row {
-    display: flex;
-    gap: 10px;
-}
-
-section.row .input-group {
-    flex: 1;
-}
-
-
-.search-btn {
-    display: block;
-    width: 100%;
-    background-color: #ffcf40;
-    color: #252525;
-    font-weight: bolder;
+input, select {
     padding: 10px;
-    font-size: 16px;
+    border: 1px solid #ccc;
+    width: 100%;
+    font-size: 14px;
+    color: gray;
+}
+
+button {
+    background: #ffcf40;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
     text-transform: uppercase;
-    margin-top: 20px;
 }
 
-.search-btn:hover {
-    background-color: #ffcf40;
+button:hover {
+    background: #e0a800;
 }
 
 
 
-
-
-/*holiday */
-/* Styling the card container */
 .card {
     position: relative;
     width: 100%; 
     border-radius: 10px;
     overflow: hidden;
     font-family: Arial, sans-serif;
-    margin-top: 5%;
+    margin-top: 8%;
 }
 .card-image {
     margin: 0;
@@ -221,13 +211,16 @@ section.row .input-group {
 }
 .card-content {
     position: absolute;
+    margin-top: 20px;
+    margin-left: 40px;
     top: 0;
     left: 0;
     width: 80%;
     background-color:#52d3f0; 
     color: #252525;
     padding: 30px;
-    border-radius: 10px 10px 0 0; 
+    border-radius: 30px 0 30px 0; 
+    font-family: 'Montserrat',sans-serif;
  
 }
 
@@ -239,7 +232,8 @@ section.row .input-group {
 
 .card-content p {
     margin: 0 0 10px;
-    font-size: 14px;
+    font-size: 16px;
+   
 }
 
 .price {
@@ -247,15 +241,19 @@ section.row .input-group {
     font-weight: bolder;
 }
 
-
 .cta-button {
+    position: absolute; 
+    bottom: 20px;
+    right: 40px; 
     background-color: #ffcf40;
     color: #252525;
     border: none;
-    padding: 10px 15px;
-    font-weight: bold;
+    padding: 15px 0px;
     border-radius: 5px;
     cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight:700 !important;
+    font-size: 12px;
     
 }
 
@@ -263,14 +261,16 @@ section.row .input-group {
     background-color: #e0b836;
 }
 
-/* tilbud section */
+
 .tilbud-section {
     display: flex;
     gap: 20px; 
     overflow-x: scroll; 
-    padding: 20px 0;
+    padding: 30px 0;
     scrollbar-width: thin; 
     scrollbar-color: #ccc transparent;
+    padding-left: 15px;
+
 }
 
 
@@ -317,39 +317,42 @@ section.row .input-group {
 }
 
 
-/* tips og inspirasjon */
+
 
 .deal-card {
     position: relative;
-    width: 100%; /* Samme bredde som i 'holiday'-seksjonen */
-    border-radius: 10px; /* Runde hjørner */
-    overflow: hidden; /* Sikrer at alt utenfor kortet klippes bort */
+    width: 90%; 
+    border-radius: 10px; 
+    overflow: hidden;
     font-family: Arial, sans-serif;
-    margin-top: 5%; /* Match marginene */
+    margin-top: 5%; 
     border: 1px solid  #f6f5f2;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     transition: transform 0.3s ease; 
+    margin-left: auto; /* Sentrer horisontalt */
+    margin-right: auto; /* Sentrer horisontalt */
+    margin-bottom: 15px;
 }
 
 .badge {
     position: absolute;
-    top: 10px;
-    left: 10px; 
-    background-color: #00a3ff;
+    top: -2px;
+    left: -8px; 
+    background-color: #1ca2c1;
     color: #fff;
-    padding: 5px 10px;
+    padding: 12px 12px;
     font-weight: bold;
     font-size: 12px;
-    border-radius: 5px;
+    border-radius: 12px;
     z-index: 10;
 }
 
 .deal-image {
-    width: 100%; /* Bildet fyller hele bredden */
-    height: auto; /* Opprettholder proporsjonene */
+    width: 100%; 
+    height: auto;
     display: block;
-    border-radius: 10px; /* Runde hjørner for bildet */
+    border-radius: 10px; 
 
 }
 
@@ -372,14 +375,16 @@ section.row .input-group {
 }
 
 .deal-content .price {
+    position: relative;
+    bottom: -19px;
     font-size: 16px;
     font-weight: bold;
-    color: #00a3ff;
+    color: #252525;
     margin-top: 10px;
     font-family:'Montserrat', sans-serif ;
+    border-bottom: 3px solid #1ca2c1; 
+    display: inline-block;
 }
-
-
 
 
 /* footer */
@@ -402,10 +407,10 @@ section.row .input-group {
     margin-bottom: 30px;
 }
 .Sverigee, .Danmarke, .Norgee, .soumee, .Nederlande {
-    display: inline-block; /* Holder dem på linje */
-    vertical-align: middle; /* Justerer dem vertikalt */
-    font-size: 16px; /* Standard tekststørrelse */
-    margin-right: 20px !important; /* Gap mellom bilde og tekst */ 
+    display: inline-block; 
+    vertical-align: middle; 
+    font-size: 16px;
+    margin-right: 20px !important;
     margin-bottom: 5px;
 }
 
@@ -413,7 +418,7 @@ section.row .input-group {
     width: 40px;
     height: auto;
 }
-/* Betalingsmetoder */
+
 .payment-methods h2 {
     justify-content: left;
     margin-bottom: 1rem;
@@ -437,7 +442,7 @@ section.row .input-group {
     margin-bottom: 40px; 
     color: #e8e8e8; 
 }
-/* nyheter og tilbud */
+
 
 .footer-section {
     display: flex;
@@ -469,13 +474,13 @@ section.row .input-group {
 .nyheter-tilbud form {
     display: flex; 
     align-items: center; 
-    justify-content: space-between; /* Sikrer god plassfordeling */
+    justify-content: space-between; 
     margin-bottom: 10px; 
     margin-top: 10px; 
     border: 1px solid #e8e8e8; 
-    padding: 15px; /* Juster padding for bedre plass */
-    border-radius: 4px; /* Runde hjørner */
-    box-sizing: border-box; /* Viktig for å holde elementene innenfor rammen */
+    padding: 12px; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
     
 
 }
@@ -494,27 +499,27 @@ section.row .input-group {
 }
 
 .nyheter-tilbud input {
-    flex: 1; /* Fyller opp tilgjengelig plass */
-    padding: 8px 2px; /* Mindre padding */
-    font-size: 13px; /* Juster tekststørrelsen */
-    border: 1px solid #ccc; /* Tynnere border */
-    border-radius: 4px; /* Runde hjørner */
+    flex: 1; 
+    padding: 8px 2px; 
+    font-size: 13px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
     outline: none; 
-    box-sizing: border-box; /* Forhindrer overskridelse */
-    width: 75%; /* Juster bredde */
+    box-sizing: border-box; 
+    width: 75%; 
 }
-
 .nyheter-tilbud button {
-    padding: 8px 2px; /* Juster padding for knapp */
+    padding: 7px 2px; 
     background-color: #ffcf40; 
     border: none; 
     border-radius: 4px; 
     color: black; 
     font-weight: bold; 
     cursor: pointer; 
-    margin-left: 2px; /* Avstand mellom input og knapp */
-    box-sizing: border-box; /* Sørger for korrekt dimensjonering */
-    width:25%; /* Juster bredde */
+    margin-left: 2px;
+    box-sizing: border-box; 
+    width:27%; 
+    font-size: 13px;
 }
 
 
@@ -564,7 +569,7 @@ section.row .input-group {
 }
 
 
-/* sosiale medier */
+
 .sosiale-medier h2 {
     justify-content: left;
     margin-bottom: 1rem;
@@ -623,29 +628,29 @@ section.row .input-group {
 }
 .heart-icon {
     position: absolute;
-    top: 10px;  /* Avstand fra toppen */
-    right: 10px; /* Avstand fra høyre */
-    font-size: 18px; /* Størrelse på hjerteikonet */
-    color: white; /* Sett tekstfarge til hvit for å gjøre fyllfargen hvit */
-    border: 0.5px solid white; /* Rød kantlinje for hjertet */
-    border-radius: 50%; /* For å gjøre hjertet rundere */
-    padding: 2px; /* Legg til litt plass rundt ikonet for å gjøre hjertet mer synlig */
+    top: 10px;  
+    right: 10px;
+    font-size: 18px; 
+    color: white; 
+    border: 0.5px solid white; 
+    border-radius: 50%;
+    padding: 2px; 
 }
 .heart-icone {
     position: absolute;
-    top: 10px;  /* Avstand fra toppen */
-    right: 10px; /* Avstand fra høyre */
-    font-size: 18px; /* Størrelse på hjerteikonet */
-    color: red; /* Sett tekstfarge til hvit for å gjøre fyllfargen hvit */
-    border: 0.5px solid white; /* Rød kantlinje for hjertet */
+    top: 10px;  
+    right: 10px; 
+    font-size: 18px; 
+    color: red; 
+    border: 0.5px solid white; 
     background-color: white;
-    border-radius: 50%; /* For å gjøre hjertet rundere */
-    padding: 2px; /* Legg til litt plass rundt ikonet for å gjøre hjertet mer synlig */
+    border-radius: 50%;
+    padding: 2px;
 }
 
-/* Justering for å plassere ikonet på de andre bildene */
+
 .slider img {
-    width: 100%; /* Sørg for at bildene fyller hele slideren */
+    width: 100%;
 }
 
 
@@ -696,7 +701,7 @@ section.row .input-group {
 
 
 .menue{
-    /* Fast linje under knappene */
+    
     position: relative;
     display: flex;
     max-width: 600px;
@@ -705,11 +710,11 @@ section.row .input-group {
 .menue::after {
     content: "";
     position: absolute;
-    bottom: 0; /* Plasser linjen under knappene */
+    bottom: 0;
     left: 0;
-    width: 100%; /* Linjen strekker seg over hele bredden av knappene */
-    height: 2px; /* Tykkelsen på linjen */
-    background-color: #e8e8e8; /* Fargen på linjen */
+    width: 100%; 
+    height: 2px; 
+    background-color: #e8e8e8; 
 }
 .radio-button {
     display: none;
@@ -727,9 +732,6 @@ section.row .input-group {
     cursor: pointer;
     border-bottom: 2px solid transparent;
     transition: color 0.3s, border-color 0.3s;
-   
-
-    
 }
 
 
@@ -737,7 +739,10 @@ section.row .input-group {
     color: #1ca2c1;
     border-bottom: 4px solid #1ca2c1;
 }
-
+a:focus .button, a:hover .button {
+    color: #1ca2c1;
+    border-bottom: 4px solid #1ca2c1;
+}
 
 .fantastisk-container{
     margin-top: 40px;
@@ -810,6 +815,7 @@ section.row .input-group {
     
 }
 
+
 .kart {
     padding: 0rem;
     margin-top: 30px;
@@ -827,7 +833,6 @@ section.row .input-group {
     border: none;
     border-radius: 10px;
 }
-/* anmeldelsers */
 
  .anmeldelsers{
     position: relative; 
@@ -953,6 +958,10 @@ section.row .input-group {
 
 
 
+
+
+
+
 /* order side */
 .søke-tabs{
     display: flex;
@@ -994,6 +1003,92 @@ section.row .input-group {
     line-height: 1;
     display: flex; 
 }
+
+
+
+.hotellseksjon {
+    max-width: 1000px;
+    margin: 0 auto; /* Sentraliser seksjonen */
+    padding: 10px;
+}
+
+/* Details styling */
+details {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #252525;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    cursor: pointer;
+}
+
+summary:hover {
+    color: #252525;
+}
+
+.arrow {
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+/* Når details åpnes, snu pilen */
+details[open] .arrow {
+    transform: rotate(180deg);
+}
+
+/* Hotell-informasjon */
+.hotell-info {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.hotell-bilde {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hotell-info h3 {
+    margin: 5px 0;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: start;
+}
+.icon-divevalg{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 2px;
+    color:#ffcf40;
+    text-align: start;
+}
+.hotell-detaljer {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.hotell-detaljer li {
+    margin-bottom: 5px;
+}
+
+
+
+
+
 
 
 .order-title h2 {
@@ -1089,7 +1184,7 @@ section.row .input-group {
     
 }
 .kjønn input[type="radio"] {
-    margin-right: 5px; /* Avstand mellom radioknappen og etiketten */
+    margin-right: 5px; 
     margin-top: 10px;
     margin-bottom: 20px;
     
@@ -1122,8 +1217,8 @@ section.row .input-group {
     width: 100%;
 }
 .select-land option {
-    word-wrap: break-word; /* Bryter teksten hvis den er for lang */
-    overflow: hidden;      /* Hindrer overflyt av tekst */
+    word-wrap: break-word; 
+    overflow: hidden;      
     
 }
 
@@ -1152,3 +1247,10 @@ section.row .input-group {
     font-family: 'Montserrat',sans-serif;
     margin-bottom: 30px;
 }
+
+
+
+
+
+
+

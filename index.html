@@ -13,9 +13,9 @@
         <header class="menu">
             <nav class="navbar">
                 <div class="navdiv">
-                    <div class="logo"><a href="#"><img src="bildemappe/fav.png" alt="logo"></a> </div>
+                    <div class="logo"><a href="index.html"><img src="bildemappe/fav.png" alt="logo"></a> </div>
                     <ul class="header-icons">
-                        <li><i class="fas fa-search"></i></li> 
+                        <li><a href="order.html"><i class="fas fa-search"></i></a></li> 
                         <li><i class="far fa-user-circle"></i></li> 
                         <li><i class="fas fa-bars"></i></li> 
                     </ul> 
@@ -27,52 +27,41 @@
         <main class="main-content">
             <div class="booking-section">
                 
-                <section class="travel-booking-section">
-                    <nav class="tabs">
-                        <button class="tab active"><i class="fa-solid fa-suitcase"></i> Fly + Hotell</button>
-                        <button class="tab"><i class="fa-sharp fa-solid fa-plane"></i> Fly</button>
-                        <button class="tab"><i class="fa-sharp fa-solid fa-city"></i> Storby</button>
-                        <button class="tab"><i class="fa-sharp fa-solid fa-person-skiing"></i> Ski</button>
-                        <button class="tab"><i class="fa-solid fa-map-location-dot"></i> Kombinasjoner</button>
+                <section class="banner"></section>
+                <section class="bestillingsskjema">
+                    <nav class="første-felte">
+                        <a href="#" class="active"><i class="fa-solid fa-suitcase"></i> Fly + Hotell</a>
+                        <a href="#"><i class="fa-sharp fa-solid fa-plane"></i> Fly</a>
+                        <a href="#"><i class="fa-sharp fa-solid fa-city"></i> Storby</a>
+                        <a href="#"><i class="fa-sharp fa-solid fa-person-skiing"></i> Ski</a>
+                        <a href="#"><i class="fa-solid fa-map-location-dot"></i> Kombinasjoner</a>
                     </nav>
-                </section>
-                
-                <section class="form-section">
-                    
-                    <form action="index.php" method="post" class="kasse_inputs_3">
-                
-                        <fieldset class="input-group">
-                            <label for="form">Fra</label>
-                            <input type="text" id="form" placeholder="Oslo Lufthavn" minlength="6" maxlength="10" required>
-                        </fieldset>
-                
-                        <fieldset class="input-group">
-                            <label for="formm">Til</label>
-                            <input type="text" id="formm" placeholder="Albania" minlength="6" maxlength="10" required>
-                        </fieldset>
-                
-                        <section class="row">
-                            <fieldset class="input-group">
-                                <label for="travel-duration">Reiselengde</label>
-                                <select id="travel-duration" required>
-                                    <option value="">Velg</option>
-                                    <option value="1">Mindre enn 1 uke</option>
-                                    <option value="2">1-2 uker</option>
-                                    <option value="3">Mer enn 2 uker</option>
+                    <form>
+                        <label for="fra">Fra</label>
+                        <input type="text" id="fra" name="fra" placeholder="Oslo Lufthavn" required>
+                        
+                        <label for="til">Til</label>
+                        <input type="text" id="til" name="til" placeholder="Albania" required>
+                        
+                        <section class="grid-container">
+                            <section>
+                                <label for="reise">Reiselengde</label>
+                                <select id="reise" name="reise">
+                                    <option value="mindre">Mindre enn 1 uke</option>
+                                    <option value="1-2uker">1-2 uker</option>
+                                    <option value="mer">Mer enn 2 uker</option>
                                 </select>
-                            </fieldset>
-                            <fieldset class="input-group">
-                                <label for="date">Velg dato</label>
-                                <input type="date" id="date" required>
-                            </fieldset>
+                            </section>
+                            <section >
+                                <label for="dato">Velg dato</label>
+                                <input type="date" id="dato" name="dato" required>
+                            </section>
                         </section>
-                
-                        <fieldset class="input-group">
-                            <label for="datetime">Antall reisende</label>
-                            <input type="number" id="datetime" placeholder="2" min="1" required>
-                        </fieldset>
-                
-                        <button type="submit" class="search-btn">Søk</button>
+                        
+                        <label for="antall">Antall reisende</label>
+                        <input type="number" id="antall" name="antall" min="1" max="10" value="2">
+                        
+                        <button type="submit">Søk</button>
                     </form>
                 </section>
                 
@@ -90,8 +79,8 @@
                         <h2>Bestill sommerens beste uke</h2>
                         <p>Fly + hotell, 7 dager</p>
                         <p class="price">Fra <strong>3 298,-</strong></p>
-                        <button class="cta-button">Bestill i dag</button>
                     </section>
+                    <a href="order.html"><button class="cta-button">Bestill i dag</button></a>
                 </section>
 
                
@@ -122,7 +111,7 @@
                     <article class="deal-content">
                         <h2>Greske favoritter</h2>
                         <p>Akkurat nå får du 1 000,- i rabatt per bestilling til bl.a. Parga, Sivota, Lefkas, Korfu og Kalamata i Hellas. Gjelder avreiser i sommer 2025. Kampanjen er gyldig i perioden 3/1 - 12/1-2025. Bruk rabattkoden <strong>WEEKDEAL</strong> ved bestilling.</p>
-                        <p class="price">Fra kr 3 970 &rarr;</p>
+                        <a href="hotell.html"><p class="price">Fra kr 3 970 &rarr;</p></a>
                     </article>
                 </section>
                 
@@ -131,7 +120,7 @@
                     <article class="deal-content">
                         <h2>Solskinnspriser - bestill i dag!</h2>
                         <p>Spar opptil 45%. Akkurat nå tilbyr vi billge vinterreiser til mange reisemål. bestill vinterens herligste uke i dag!</p>
-                        <p class="price">Fra kr 3 203/p>
+                       <a href="hotell.html"> <p class="price">Fra kr 3 203 &rarr;</p></a>
                     </article>
                 </section>
                 <section class="deal-card">
@@ -139,7 +128,7 @@
                     <article class="deal-content">
                         <h2>Storbyferie</h2>
                         <p>Bestill en langhelg og unn deg en flott weekendreise i en storby der du selv velger reiselengde, fly og nøye utvalgte hotell.</p>
-                        <p class="price">Les mer</p>
+                        <p class="price">Les mer &rarr;</p>
                     </article>
                 </section>
                 <section class="deal-card">
@@ -147,7 +136,7 @@
                     <article class="deal-content">
                         <h2>Besøk påsekfavoritten London</h2>
                         <p>London er en av de mest populære resiemålene i påsken, Kjent for sin unike blanding av historiske, Kultur og moderne opplevelser.</p>
-                        <p class="price">Fra kr 2 150</p>
+                        <a href="hotell.html"><p class="price">Fra kr 2 150 &rarr;</p></a>
                     </article>
                 </section>
                 <section class="deal-card">
@@ -156,7 +145,7 @@
                     <article class="deal-content">
                         <h2>Skiferie</h2>
                         <p>Drømmer du om puddersnø, frisk fjelluft og fartsfylte nedfarter? Vinteren er endelig her, og det betyr at skisesongen er i full gang!</p>
-                        <p class="price">Se alle skistedene</p>
+                        <p class="price">Se alle skistedene &rarr;</p>
                     </article>
                 </section>
                 <section class="deal-card">
@@ -164,7 +153,7 @@
                     <article class="deal-content">
                         <h2>Spar opptil 7000,- til sommer</h2>
                         <p>Drømmer du om solfylte dager og ekotiske opplevelser? Nå har du sjansen til å sikre deg din drømmeferie til en fantastisk pris!</p>
-                        <p class="price">Les mer</p>
+                        <p class="price">Les mer &rarr;</p>
                     </article>
                 </section>
 
@@ -182,7 +171,7 @@
         <footer class="footer-container">
             
                     
-            <section class="flags">
+            <section class="flags" id="foote-flag">
                 <ul>
                     <li class="første-flag1">
                         <span><img class="Sverigee" src="flagmappe/sweden.png" alt="Sverige"> Sverige</span>

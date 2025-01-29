@@ -14,9 +14,9 @@
     <header class="menu">
       <nav class="navbar">
           <div class="navdiv">
-             <div class="logo"><a href="#"><img src="bildemappe/fav.png" alt="logo"></a> </div>
+             <div class="logo"><a href="index.html"><img src="bildemappe/fav.png" alt="logo"></a> </div>
               <ul class="header-icons">
-                <li><i class="fas fa-search"></i></li> 
+                <li><a href="order.html.html"><i class="fas fa-search"></i></a></li> 
                 <li><i class="far fa-user-circle"></i></li> 
                 <li><i class="fas fa-bars"></i></li> 
               </ul> 
@@ -26,21 +26,52 @@
   
     <section class="søkefelt">
         <nav class="søke-tabs">
-           <button class="søke-tab"> Søk</button>
+           <a href="index.html"><button class="søke-tab"> Søk</button></a>
            <span class="søkefelt-icon"><i class= "fas fa-chevron-right"></i></span>
-           <button class="søke-tab"> Søkeresultater</button>
+           <a href="hotell.html"><button class="søke-tab"> Søkeresultater</button></a>
            <span class="søkefelt-icon"><i class= "fas fa-chevron-right"></i></span>
-           <button class="søke-tab">Romtype</button>
+           <a href="hotell.html#anmel-r"><button class="søke-tab">Romtype</button></a>
            <span class="søkefelt-icon"><i class= "fas fa-chevron-right"></i></span>
-           <button class="søke-tab">Fly</button>
+           <a href="https://www.norwegian.no/"><button class="søke-tab">Fly</button></a>
            <span class="søkefelt-icon"><i class= "fas fa-chevron-right"></i></span>
            <button class="søke-tab">Tillegg</button>
            <span class="søkefelt-icon"><i class= "fas fa-chevron-right"></i></span>
            <button class="søke-tab">OPPLYSNINGER</button>
            <span class="søkefelt-icon"><i class= "fas fa-chevron-right"></i></span>
-           <button class="søke-tab">Bestill</button>
+           <a href="#foote-flag"><button class="søke-tab">Bestill</button></a>
         </nav>
     </section>
+    <section class="hotellseksjon">
+        <details>
+            <summary>Dine valg <span class="arrow">▼</span></summary>
+            <figure class="hotell-info">
+                <img src="bildemappe/landscape-hotell.jpg" alt="Parge Beach" class="hotell-bilde">
+                <figcaption>
+                    <h3>Parge Beach</h3>
+                    <section class="icon-divevalg">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-sun"></i>
+                        <i class="far fa-sun"></i>
+                    </section>
+
+                    <section class="hotell-detaljer">
+                        <span class="detalj"><i class="fas fa-map-marker-alt"></i> <p>Hellas, Praga</p></span>
+                        <span class="detalj"><i class="far fa-calendar"></i><p>Man 5 mai - man 12 mai 2025</p></span>
+                        <span class="detalj"><i class="fa-regular fa-user"></i><p>2 Voksne</p></span>
+                        <span class="detalj"><i class="fas fa-bed"></i><p>Deluxerom, Balkong og ikke spesifisert uutsikt.</p></span>
+                        <span class="detalj"><i class="fas fa-utensils"></i><p>Frokostbuffe</p></span>
+                        <span class="detalj"><i class="fas fa-plane-departure"></i><p>Oslo Lufthavn -- Preveza</p></span>
+                        <span class="detalj pris"><p>22 003,-</p></span>
+                        <span class="detalj rabatt"><p>19 803,-</p></span>
+                    </section>
+                    
+                </figcaption>
+            </figure>
+        </details>
+    </section>
+    
 
     <section class="order-title">
       <h2>Oppgi dine bestillingsopplysninger</h2>
@@ -173,7 +204,7 @@
 <footer class="footer-container">
             
                     
-  <section class="flags">
+  <section class="flags" id="foote-flag">
       <ul>
           <li class="første-flag1">
               <span><img class="Sverigee" src="flagmappe/sweden.png" alt="Sverige"> Sverige</span>
