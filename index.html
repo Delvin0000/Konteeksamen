@@ -53,12 +53,17 @@
                         <a href="#"><i class="fa-solid fa-map-location-dot"></i> Kombinasjoner</a>
                     </nav>
                     <form>
-                        <label for="fra">Fra</label>
-                        <input type="text" id="fra" name="fra" placeholder="Oslo Lufthavn" required>
-                        
-                        <label for="til">Til</label>
-                        <input type="text" id="til" name="til" placeholder="Albania" required>
-                        
+                        <section class="input-row">
+                            <section>
+                                <label for="fra">Fra</label>
+                                <input type="text" id="fra" name="fra" placeholder="Oslo Lufthavn" required>
+                            </section>
+                            <section>
+                                <label for="til">Til</label>
+                                <input type="text" id="til" name="til" placeholder="Albania" required>
+                            </section>
+                        </section>
+            
                         <section class="grid-container">
                             <section>
                                 <label for="reise">Reiselengde</label>
@@ -72,12 +77,15 @@
                                 <label for="dato">Velg dato</label>
                                 <input type="date" id="dato" name="dato" required>
                             </section>
+                            
                         </section>
+                        <section class="input-resie">
+                            <label for="antall">Antall reisende</label>
+                            <input type="number" id="antall" name="antall" min="1" max="10" value="2">
+                        </section>
+                        <a href="#" class="søkere" >Søk</a>
                         
-                        <label for="antall">Antall reisende</label>
-                        <input type="number" id="antall" name="antall" min="1" max="10" value="2">
-                        
-                        <button type="submit">Søk</button>
+                       
                     </form>
                 </section>
                 
@@ -120,7 +128,7 @@
 
 
 
-
+              <section class="deal-cards-container">
                 <section class="deal-card">
                     <span class="badge">Ukens Deal</span>
                     <img src="bildemappe/beach-mountain.jpg" alt="Bilde av greske strender" class="deal-image">
@@ -172,6 +180,7 @@
                         <p class="price">Les mer &rarr;</p>
                     </article>
                 </section>
+               </section>
 
 
 
