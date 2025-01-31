@@ -35,6 +35,7 @@ body, html {
     box-sizing: border-box;
     max-width: 1400px;
 }
+
 .menu, .footer {
     width: 100%;
     font-family: 'Montserrat', sans-serif;
@@ -76,11 +77,14 @@ a {
     color: black;
     text-decoration: none; 
 }
+#file {
+    color: #e8e8e8;
+}
 .desktop-header {
-    display: none; /* Skjuler seksjonen på mobil */
+    display: none;
 }
 
-/*main booking seksjon */
+
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -723,7 +727,7 @@ button:hover {
         margin-top: 5%; 
         border-radius: 10px; 
         overflow: hidden;
-        font-family: Arial, sans-serif;
+        font-family:'Montserrat', sans-serif;
         border: 1px solid #f6f5f2;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease; 
@@ -732,9 +736,9 @@ button:hover {
         margin-bottom: 15px;
     }
 
-    /* Hvis du vil justere spesifik plassering eller retning for seksjonene, kan du gjøre det her */
+   
     .deal-card:nth-child(1) {
-        order: 1; /* Kan endre rekkefølgen på elementene */
+        order: 1; 
     }
 
     .deal-card:nth-child(2) {
@@ -757,17 +761,6 @@ button:hover {
         order: 6;
     }
     
-    
-    
-
-
-   
-    
-
-    
-
-
-
     .footer-container {
         max-width: 1400px;
         margin: 0 auto;
@@ -1000,6 +993,7 @@ a:focus .button, a:hover .button {
     font-size: 16px;
     gap: 10px;
     padding: 1rem;
+    width: 100%;
 }
 .icon-description {
     margin-bottom: 10px;
@@ -1138,6 +1132,131 @@ a:focus .button, a:hover .button {
 
 
 
+@media (min-width: 1024px) {
+    .slider {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);  /* 4 like kolonner */
+        grid-template-rows: auto auto  auto; /* 2 rader */
+        gap: 5px; /* Redusert gap for mindre mellomrom */
+        margin-top: 20px;
+        align-items: stretch; /* Sikrer at alle bilder har samme høyde */
+    }
+
+    /* Sikrer at alle bildene fyller sin plassering i grid */
+    .slider img {
+        width: 98%;
+        height: 95%;
+        object-fit: cover;
+    }
+
+    /* Første bilde (øverst) tar 2 kolonner */
+    #slide-1 {
+        grid-column: span 2;
+        grid-row: 1;
+    }
+
+    /* De fire midterste bildene tar 1 kolonne hver */
+    #slide-2 {
+        grid-column: span 1;
+        grid-row: 1;
+    }
+
+    #slide-3 {
+        grid-column: span 1;
+        grid-row: 1;
+    }
+
+    #slide-4 {
+        grid-column: span 1;
+        grid-row: 2;
+    }
+
+    #slide-5 {
+        grid-column: span 1;
+        grid-row: 2;
+    }
+
+    /* Siste bilde (nederst) tar 2 kolonner og er like stort som #slide-1 */
+    #slide-6 {
+        grid-column: span 2;
+        grid-row: 2;
+    }
+    .menue {
+        max-width: 1000px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+    }
+
+
+
+    .fantastisk-container
+    , .fasititeter,
+    .fasiliteter-container{
+        max-width: 1000px;
+        width: 40%;
+        margin-left: auto;
+        margin-right: 50%;
+        position: relative;
+        margin-top: 10px;
+    }
+    .fasititeter {
+        margin-top: -40px;
+    }
+    .kart {
+        max-width: 1000px;
+        width: 30%;
+        margin-left: auto;
+        margin-right: 10%;
+        margin-top: -450px;
+        width: 20%;  
+    }
+    .map-iframe {
+        height: 300px; 
+    }
+   
+
+
+    .anmeldelsers {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        margin-top: 120px;
+        max-width: 1000px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+    }
+    .anmeldelser {
+        display: block;
+    }
+    .anmel-content {
+        box-sizing: border-box;
+        padding: 10px; 
+        margin-bottom: 20px;
+        height: 100%; 
+    }
+    .anmeldelser:nth-child(4) {
+        grid-column: span 1; 
+        grid-row: 2; 
+    }
+    .anmel-image {
+        width: 250px; 
+        height: 200px;
+        object-fit: cover; 
+        display: block; 
+    }
+    }
+   
+
+
+
+
+
+
+
+
 
 
 
@@ -1201,9 +1320,6 @@ a:focus .button, a:hover .button {
     display: flex; 
 }
 
-
-
-
 .hotellseksjon {
     max-width: 1000px;
     margin: 0 auto; 
@@ -1220,6 +1336,10 @@ details {
     padding: 10px;
     cursor: pointer;
 }
+.details {
+    display: none;
+}
+
 
 summary {
     display: flex;
@@ -1292,9 +1412,18 @@ details[open] .arrow {
 
 
 
-
-
-
+.opplysninger1 {
+    margin-top: 0;   
+    flex-direction: column; 
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px; 
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #f6f5f2;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
 .order-title h2 {
     font-size: 24px;
     margin-bottom: 20px;
@@ -1338,6 +1467,13 @@ details[open] .arrow {
 }
 */
 
+.opplysninger1 #firstname {
+    margin-bottom: 20px
+}
+
+.opplysninger1 #lastname {
+    margin-bottom: 20px
+}
 .datoer {
     margin-top: 10px;        
 }
@@ -1375,19 +1511,6 @@ details[open] .arrow {
     width: 50px;               
 }
 
-
-
-
-
-
-
-
-.kjønn label[for="title"] {
-    font-size: 13.5px;
-    font-weight: bold;
-    margin: 0;
-}
-
 .kjønn legend {
     font-size: 13.5px;
     font-weight: bold;
@@ -1403,11 +1526,6 @@ fieldset.kjønn label {
     margin-right: 100px; 
     margin-bottom: 5px;
 }
-
-
-
-
-
 
 
 
@@ -1444,20 +1562,6 @@ fieldset.kjønn label {
     overflow: hidden;      
     
 }
-
-.opplysninger1 {
-    margin-top: 0;   
-    flex-direction: column; 
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px; 
-    margin-left: 20px;
-    margin-right: 20px;
-    background-color: #f6f5f2;
-    border-radius: 10px;
-    font-style: 'Montserrat';
-    margin-bottom: 15px;
-}
 .siste-trinn{
     margin-left: 20px;
     height: 45px;
@@ -1472,6 +1576,191 @@ fieldset.kjønn label {
 }
 
 
+@media (min-width: 1024px) {
+    .søkefelt{
+        max-width: 1400px;
+        width: 86%;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        margin-top: 40px;
+        
+    }
+    details {
+        display: none;
+    }
+    .details {
+        max-width: 1000px;
+        width: 47%;
+        display: block; 
+        cursor: default; 
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        margin-right: auto;
+        margin-left: 55%;
+    }
+    
+    .hotell-info {
+        padding: 10px;
+        margin-top: -1050px;
+    }
+    
+    .opplysninger1 {
+        width: 40%;
+        background-color: #f6f5f2;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        margin-left: 10%;
+       
+       
+    }
+    
+    .order-title h2 {
+        font-size: 20px;
+        margin-bottom: 20px;
+        margin-left: 10%;
+    }
+    
+    .opplysninger1 h3 {
+        font-size: 15px;
+    }
+    
+    .datoer {
+        margin-top: 10px;
+    }
+    
+    .datoer label {
+        font-size: 15px;
+        font-weight: bold;
+        margin-bottom: 7px;
+    }
+    
+    .datoer .inputs {
+        display: flex;
+        gap: 20px;
+    }
+    
+    .opplysninger1 form {
+        display: flex;
+        justify-content: space-between; 
+        gap: 20px; 
+    }
+    
+    .opplysninger1 label {
+        font-size: 13.5px;
+        font-weight: bold;
+        color: #333;
+        display: block; 
+        margin-top: 15px;
+    }
+    
+    .opplysninger1 input {
+        font-size: 15px;
+        padding: 5px;
+        border: 2px solid #e8e8e8;
+        border-radius: 5px;
+        width: 100%; 
+        height: 35px;
+    }
+    
+    
+    .names {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .names .name-field {
+        width: 48%; 
+    }
+    
+    .datoer .inputs input {
+        width: 30%; 
+    }
+    .kjønn input[type="radio"] {
+        transform: scale(0.5); 
+        margin-right: 10px; 
+        margin: 0;
+    }
+    .kjønn label {
+        margin: 0;
+    }
+    .kjønn {
+        width: 50px;
+        align-items: center;
+    }
+    
+.kontakt-informasjon {
+    display: flex;
+    flex-direction: column; 
+    gap: 5px; 
+}
+
+
+.desktop-row {
+    display: flex;
+    justify-content: space-between; 
+    gap: 10px; 
+}
+
+
+.info {
+    display: flex;
+    flex-direction: column; 
+    gap: 5px; 
+    width: 48%; 
+}
+
+
+.info label {
+    font-size: 13.5px;
+    font-weight: bold;
+    color: #333;
+    display: block;
+}
+
+
+.info input,
+.info select {
+    font-size: 15px;
+    padding: 5px;
+    border: 2px solid #e8e8e8;
+    border-radius: 5px;
+    width: 100%; 
+    height: 35px;
+}
+
+
+.desktop-row .info input[type="email"],
+.desktop-row .info input[type="tel"] {
+    width: 100%; 
+}
+
+
+.desktop-row .info input[type="text"],
+.desktop-row .info input[type="number"] {
+    width: 100%;
+}
+
+.desktop-row .info .select-land {
+    width: 100%; 
+}
+.siste-trinn {
+    margin-left: 10%;
+}
+
+
+
+
+    
+    
+    
+
+
+
+
+
+
+    
 
 
 
@@ -1479,7 +1768,4 @@ fieldset.kjønn label {
 
 
 
-
-
-
-
+}

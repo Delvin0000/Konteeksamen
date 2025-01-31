@@ -25,12 +25,12 @@
                 <section class="search-desktop-container">
                     <i class="fas fa-search"></i> 
                     <a href="#" class="link2">Opprett en Konto</a>
-                    <a href="#" class="link1"><i class="far fa-user-circle"></i> Min side</a>
+                    <a href="order.html" class="link1"><i class="far fa-user-circle"></i> Min side</a>
                 </section>
                 
                 <section class="desktop-buttons">
-                    <a href="#">Tips og inspirasjon</a>
-                    <a href="#">Hotell</a>
+                    <a href="index.html#tip-og-inspirasjon">Tips og inspirasjon</a>
+                    <a href="hotell.html">Hotell</a>
                     <a href="#">Fly</a>
                     <a href="#">Kontakt</a>
                 </section>
@@ -45,12 +45,12 @@
                 <section class="container">
                     <section class="slider-wrapper">
                         <section class="slider">
-                            <img id="slide-1" src="bildemappe/landscape-hotell.jpg" alt="hotell-bilde">
-                            <img id="slide-2" src="bildemappe/beach-people.jpg" alt="beach-bilde">
-                            <img id="slide-3" src="bildemappe/sea.jpg" alt="sea">
-                            <img id="slide-4" src="bildemappe/beach-maldiv.jpg" alt="maldiv">
-                            <img id="slide-5" src="bildemappe/beach-mountain.jpg" alt="beach-bilde">
-                            <img id="slide-6" src="bildemappe/holiday.jpg" alt="hotell-holiday">
+                            <img id="slide-1"  class="grid-items" src="bildemappe/landscape-hotell.jpg" alt="hotell-bilde">
+                            <img id="slide-2"  class="grid-items" src="bildemappe/beach-people.jpg" alt="beach-bilde">
+                            <img id="slide-3"  class="grid-items" src="bildemappe/sea.jpg" alt="sea">
+                            <img id="slide-4"  class="grid-items" src="bildemappe/beach-maldiv.jpg" alt="maldiv">
+                            <img id="slide-5"  class="grid-items" src="bildemappe/beach-mountain.jpg" alt="beach-bilde">
+                            <img id="slide-6"  class="grid-items" src="bildemappe/holiday.jpg" alt="hotell-holiday">
                             <span class="heart-icon"><i class="fas fa-heart"></i></span>
                             <span class="heart-icone"><i class="far fa-heart"></i></span>
                         </section>
@@ -71,10 +71,10 @@
                     <label for="oversikt" class="button">Oversikt</label>
                 
                     <input type="radio" id="fasiliteter" name="menue" class="radio-button">
-                    <label for="fasiliteter" class="button">Fasiliteter</label>
+                    <label for="fasiliteter" class="button"><a href="#map-sek">Fasiliteter</a></label>
                 
                     <input type="radio" id="rom" name="menue" class="radio-button">
-                    <label for="rom" class="button">Rom</label>
+                    <label for="rom" class="button"><a href="#anmel-r">Rom</a></label>
                 </nav>
 
 
@@ -98,7 +98,9 @@
                     </span>
                     <p>Se alle anmeldelsene &raquo;</p>
                 </section>
+                
 
+                
                 <section class="fasititeter">
                     <h2>Fasiliteter</h2>
                     <p>Parga Beach tilbyr et tilsynelatende uuttømmelig utvalg av sport og aktiviteteter og lokker til seg så vel eliteutøvere som aktive familier og hverdagsmosjonister __ i alle aldre og på alle nivåer.</p>
@@ -144,16 +146,16 @@
                 
 
 
-                <section class="kart">
+                <section class="kart"  id="map-sek">
                     <h2>Utforsk området</h2>
-                    <section class="map" id="map-sek">
+                    <section class="map">
                         <iframe
                             class="map-iframe"
                             src="https://www.openstreetmap.org/export/embed.html?bbox=10.27,59.91,10.37,59.99&amp;layer=mapnik">
                         </iframe>
                     </section>
-                    
                 </section>
+             
 
 
                 <section class="anmeldelsers">
@@ -273,7 +275,7 @@
                         <li>Spørsmål og Svar</li>
                         <li>Chat</li>
                         <li>Kontakt</li>
-                        <li>Tilgjenglighetserklæring</li>
+                        <li><a href="https://docs.google.com/spreadsheets/d/1en9ofgsG-BY4bpf16I3cUpS4QS8dnDbY/edit?usp=sharing&ouid=118324874820816166902&rtpof=true&sd=true" target="_blank" id="file">Tilgjenglighetserklæring</a></li>
                     </ul>
                 </aside>
             </section>

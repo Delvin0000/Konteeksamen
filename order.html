@@ -26,12 +26,12 @@
         <section class="search-desktop-container">
             <i class="fas fa-search"></i> 
             <a href="#" class="link2">Opprett en Konto</a>
-            <a href="#" class="link1"><i class="far fa-user-circle"></i> Min side</a>
+            <a href="order.html" class="link1"><i class="far fa-user-circle"></i> Min side</a>
         </section>
         
         <section class="desktop-buttons">
-            <a href="#">Tips og inspirasjon</a>
-            <a href="#">Hotell</a>
+            <a href="index.html#tip-og-inspirasjon">Tips og inspirasjon</a>
+            <a href="hotell.html">Hotell</a>
             <a href="#">Fly</a>
             <a href="#">Kontakt</a>
         </section>
@@ -55,9 +55,10 @@
            <a href="#foote-flag" class="søke-tab">Bestill</a>
         </nav>
     </section>
+
     <section class="hotellseksjon">
         <details>
-            <summary>Dine valg <span class="arrow">▼</span></summary>
+            <summary>Dine valg <span class="arrow"><i class="fas fa-angle-right"></i></span></summary>
             <figure class="hotell-info">
                 <img src="bildemappe/landscape-hotell.jpg" alt="Parge Beach" class="hotell-bilde">
                 <figcaption>
@@ -69,7 +70,7 @@
                         <i class="fas fa-sun"></i>
                         <i class="far fa-sun"></i>
                     </section>
-
+    
                     <section class="hotell-detaljer">
                         <span class="detalj"><i class="fas fa-map-marker-alt"></i>Hellas, Praga></span>
                         <span class="detalj"><i class="far fa-calendar"></i>Man 5 mai - man 12 mai 2025</span>
@@ -84,23 +85,29 @@
                 </figcaption>
             </figure>
         </details>
-    </section>
     
-
+    
+    
+    
+    
     <section class="order-title">
       <h2>Oppgi dine bestillingsopplysninger</h2>
     </section>
 
     <section class="opplysninger1">
       <h3>VOKSEN 18+ HOVEDBESTILLER</h3>
+      <section class="names">
       <form action="example.html" method="get">
+      <section class="name-field">
       <label for="firstname">FORNAVN (IFØLGE PASS):</label>
-      <input type="text" id="firstname" minlength="4" maxlength="12" required><br>
-
+      <input type="text" id="firstname" minlength="4" maxlength="12" required>
+      </section>
+      <section class="name-field">
       <label for="lastname">ETTERNAVN (IFØLGE PASS):</label>
-      <input type="text" id="lastname" minlength="4" maxlength="12" required><br>
-      
-
+      <input type="text" id="lastname" minlength="4" maxlength="12" required>
+      </section>
+      </form>
+      </section>
 
       <section class="datoer">
         <label for="dayInput">FØDSELSDATO:</label>
@@ -109,13 +116,11 @@
             <input type="number" id="monthInput" name="monthInput" min="1" max="12" step="1" placeholder="MM" required>
             <input type="number" id="yearInput" name="yearInput" min="1900" max="9999" step="1" placeholder="ÅÅÅÅ" required>
         </article>
-     </section>    
+      </section>    
      
-    
 
 
-
-     <fieldset class="kjønn">
+      <fieldset class="kjønn">
         <legend>KJØNN</legend>
         
         <input type="radio" id="KVINNE" name="kjønn" value="Kvinne" required>
@@ -123,72 +128,126 @@
     
         <input type="radio" id="MANN" name="kjønn" value="MANN" required>
         <label for="MANN">MANN</label>
-    </fieldset>
+      </fieldset>
 
       <section class="kontakt-informasjon">
-        <label for="email">E-POSTADRESSE:</label>
-        <input type="email" id="email" required>
-
-        <label for="phone">TELEFONNUMMER:</label>
-        <input type="tel" id="phone" required>
-
-        <label for="gateadress">GATEADRESSE:</label>
-        <input type="text" id="gateadress" required>
-
-        <label for="postnummer">POSTNUMMER:</label>
-        <input type="number" id="postnummer" required>
-
-        <label for="poststed">POSTSTED:</label>
-        <input type="text" id="poststed" required>
-
-        <label for="land">LAND:</label>
-        <select class="select-land" id="land" required>
-            <option value="" disabled selected>Velg et land</option>
-            <option value="Norge">Norge</option>
-            <option value="Sverige">Sverige</option>
-            <option value="Danmark">Danmark</option>
-            <option value="Tyskland">Tyskland</option>
-            <option value="USA">USA</option>
-        </select>
-      </section>
-     </form>
+        <section class="desktop-row">
+            <section class="info">
+                <label for="email">E-POSTADRESSE:</label>
+                <input type="email" id="email" required>
+            </section>
+            <section class="info">
+                <label for="phone">TELEFONNUMMER:</label>
+                <input type="tel" id="phone" required>
+            </section>
+        </section>
+    
+        <section class="desktop-row">
+            <section class="info">
+                <label for="gateadress">GATEADRESSE:</label>
+                <input type="text" id="gateadress" required>
+            </section>
+            <section class="info">
+                <label for="postnummer">POSTNUMMER:</label>
+                <input type="number" id="postnummer" required>
+            </section>
+        </section>
+    
+        <section class="desktop-row">
+            <section class="info">
+                <label for="poststed">POSTSTED:</label>
+                <input type="text" id="poststed" required>
+            </section>
+            <section class="info">
+                <label for="land">LAND:</label>
+                <select class="select-land" id="land" required>
+                    <option value="" disabled selected>Velg et land</option>
+                    <option value="Norge">Norge</option>
+                    <option value="Sverige">Sverige</option>
+                    <option value="Danmark">Danmark</option>
+                    <option value="Tyskland">Tyskland</option>
+                    <option value="USA">USA</option>
+                </select>
+            </section>
+        </section>
     </section>
+    </section>
+
+   
 
 
 
     <section class="opplysninger1">
-        <h3>VOKSEN 18+</h3>
+        <h3>VOKSEN 18+ </h3>
+        <section class="names">
         <form action="example.html" method="get">
-        <label for="førstnavn">FORNAVN (IFØLGE PASS):</label>
-        <input type="text" id="førstnavn" minlength="4" maxlength="12" required><br>
-  
-        <label for="etternavn">ETTERNAVN (IFØLGE PASS):</label>
-        <input type="text" id="etternavn" minlength="4" maxlength="12" required><br>
+        <section class="name-field">
+        <label for="firstname">FORNAVN (IFØLGE PASS):</label>
+        <input type="text" id="firstnamee" minlength="4" maxlength="12" required>
+        </section>
+        <section class="name-field">
+        <label for="lastname">ETTERNAVN (IFØLGE PASS):</label>
+        <input type="text" id="lastnamee" minlength="4" maxlength="12" required>
+        </section>
+        </form>
+        </section>
   
         <section class="datoer">
           <label for="dayInput">FØDSELSDATO:</label>
           <article class="inputs">
-              <input type="number" id="dayy" name="dayInput" min="1" max="31" step="1" placeholder="DD" required>
-              <input type="number" id="monthh" name="monthInput" min="1" max="12" step="1" placeholder="MM" required>
-              <input type="number" id="yearr" name="yearInput" min="1900" max="9999" step="1" placeholder="ÅÅÅÅ" required>
+              <input type="number" id="dayInputt" name="dayInput" min="1" max="31" step="1" placeholder="DD" required>
+              <input type="number" id="monthInputt" name="monthInput" min="1" max="12" step="1" placeholder="MM" required>
+              <input type="number" id="yearInputt" name="yearInput" min="1900" max="9999" step="1" placeholder="ÅÅÅÅ" required>
           </article>
-       </section>    
+        </section>    
        
-
-
+  
+  
         <fieldset class="kjønn">
-            <legend>KJØNN</legend>
-            
-            <input type="radio" id="KVINNEE" name="kjønn" value="Kvinne" required>
-            <label for="KVINNEE">KVINNE</label>
-        
-            <input type="radio" id="MANNN" name="kjønn" value="MANN" required>
-            <label for="MANNN">MANN</label>
+          <legend>KJØNN</legend>
+          
+          <input type="radio" id="KVINNE1" name="kjønn" value="Kvinne" required>
+          <label for="KVINNE">KVINNE</label>
+      
+          <input type="radio" id="MANN1" name="kjønn" value="MANN" required>
+          <label for="MANN">MANN</label>
         </fieldset>
-    
-        </form>
     </section>
-    <button class="siste-trinn">Siste Trinn <i class="fas fa-arrow-right"></i></button>
+
+  <button class="siste-trinn">Siste Trinn <i class="fas fa-arrow-right"></i></button>
+</section>
+
+
+<section class="hotellseksjon">
+    <section class="details">
+           
+        <figure class="hotell-info">
+            <img src="bildemappe/landscape-hotell.jpg" alt="Parge Beach" class="hotell-bilde">
+            <figcaption>
+                <h3>Parge Beach</h3>
+                <section class="icon-divevalg">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-sun"></i>
+                    <i class="far fa-sun"></i>
+                </section>
+
+                <section class="hotell-detaljer">
+                    <span class="detalj"><i class="fas fa-map-marker-alt"></i>Hellas, Praga></span>
+                    <span class="detalj"><i class="far fa-calendar"></i>Man 5 mai - man 12 mai 2025</span>
+                    <span class="detalj"><i class="fa-regular fa-user"></i>2 Voksne</span>
+                    <span class="detalj"><i class="fas fa-bed"></i>Deluxerom, Balkong og ikke spesifisert uutsikt.</span>
+                    <span class="detalj"><i class="fas fa-utensils"></i>Frokostbuffe</span>
+                    <span class="detalj"><i class="fas fa-plane-departure"></i>Oslo Lufthavn -- Preveza</span>
+                    <span class="detalj pris">22 003,-</span>
+                    <span class="detalj rabatt">19 803,-</span>
+                </section>
+                
+            </figcaption>
+        </figure>
+    </section>
+</section>
 
 
 
@@ -239,7 +298,7 @@
               <li>Spørsmål og Svar</li>
               <li>Chat</li>
               <li>Kontakt</li>
-              <li>Tilgjenglighetserklæring</li>
+              <li><a href="https://docs.google.com/spreadsheets/d/1en9ofgsG-BY4bpf16I3cUpS4QS8dnDbY/edit?usp=sharing&ouid=118324874820816166902&rtpof=true&sd=true" target="_blank" id="file">Tilgjenglighetserklæring</a></li>
           </ul>
       </aside>
   </section>
